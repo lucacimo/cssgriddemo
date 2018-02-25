@@ -56,7 +56,7 @@ function validEmail(email) { // see:
     data.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
     data.formGoogleSendEmail = form.dataset.email || ""; // no email by default
   
-    console.log(data);
+    //console.log(data);
     return data;
   }
   
@@ -94,7 +94,7 @@ function validEmail(email) { // see:
     }
   }
   function loaded() {
-    console.log('contact form submission handler loaded successfully');
+    //console.log('contact form submission handler loaded successfully');
     // bind to the submit event of our form
     var form = document.getElementById('gform');
     form.addEventListener("submit", handleFormSubmit, false);
