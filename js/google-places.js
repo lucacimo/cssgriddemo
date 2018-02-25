@@ -21,7 +21,7 @@
           $element.html("<div id='map-plug'></div>"); // create a plug for google to load data into
           initialize_place(function(place){
             plugin.place_data = place;
-            console.log(plugin.settings.render);
+            //console.log(plugin.settings.render);
             // render specified sections
             if(plugin.settings.render.indexOf('reviews') > -1){
               renderReviews(plugin.place_data.reviews);
