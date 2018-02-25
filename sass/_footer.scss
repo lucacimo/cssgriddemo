@@ -1,0 +1,13 @@
+.footer {
+    grid-column: full-start / full-end;
+    display: flex;
+    padding: 5rem;
+    font-family: "Montserrat",sans-serif;
+    font-size: 1.7rem;
+    align-items: center;
+    margin-bottom: -10rem;
+
+    & small {
+        margin-right: auto;
+    } 
+}

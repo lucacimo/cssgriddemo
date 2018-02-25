@@ -1,0 +1,23 @@
+.about {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));
+    grid-gap: 6rem;
+
+    &--me {
+        grid-column: 1 span 1;
+    }
+
+    &--history {
+        grid-column: 2 span 1;    
+    }
+
+    &__img {
+        width: 20rem;
+	    height: 20rem;;
+	    float: left;
+        margin-right: 1rem;
+        border-radius: 50%; 
+	    shape-outside: circle();
+    }
+}

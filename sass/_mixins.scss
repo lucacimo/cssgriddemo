@@ -1,0 +1,16 @@
+@mixin flag {
+    background-color: white;
+    content: '';
+    position: absolute;
+    bottom: -0.7rem;
+    left: 0px;
+    width: 100%;
+    display: block;
+    height: 7px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: linear-gradient(to right,
+                                 #00b300 0%, #00b300 33.33%,
+                                 #FFFF 33.33%, #FFFF 66.66%,
+                                 #ff0000 66.66%, #ff0000 99.99%);
+}

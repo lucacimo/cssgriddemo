@@ -1,0 +1,54 @@
+.gallery {
+    grid-column: center-start / center-end;
+
+    &:not(:last-child) {
+       margin-bottom: 2rem;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+      grid-gap: 4rem;  
+      margin-bottom: 2rem;
+  }
+}
+  .video {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    margin: 1%;
+  }
+  
+  .video figure {
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+  }
+
+  .video h2 {
+    //font-family: 'Sorts Mill Goudy', serif;  
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #555;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 1.5rem .8rem;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .video figure a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: 0;
+  }
+   .video img {
+     width: 100%;
+     opacity: 1;
+   }
+  
+   .video img:hover, .video img:active, .video img:focus {
+     opacity: 0.75;
+   }
