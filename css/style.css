@@ -13,16 +13,11 @@ body {
   width: 100%;
   font-family: Montserrat,sans-serif; }
 
-header {
-  margin-bottom: 5rem; }
-
-section, footer {
-  margin-top: 5rem;
-  margin-bottom: 5rem; }
+section {
+  margin-bottom: 11.3rem; }
 
 .container {
   display: grid;
-  grid-template-rows: 100vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .spacing {
@@ -34,16 +29,18 @@ section, footer {
 .header {
   grid-column: full-start / full-end;
   background: rgba(0, 0, 0, 0.3);
-  position: relative; }
+  position: relative;
+  margin-bottom: 11.3rem;
+  height: 100vh; }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  margin-bottom: 20rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 100px 60px -25px rgba(0, 0, 0, 0.1); }
+  box-shadow: inset 0 100px 60px -25px rgba(0, 0, 0, 0.1);
+  z-index: 100; }
   .navigation--item__header a {
     color: white; }
   .navigation--item__header a:hover {
@@ -63,6 +60,13 @@ section, footer {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background: linear-gradient(to right, #00b300 0%, #00b300 33.33%, #FFFF 33.33%, #FFFF 66.66%, #ff0000 66.66%, #ff0000 99.99%); }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #101d2c;
+  padding: 0; }
 
 .header__text-box {
   position: absolute;
@@ -106,9 +110,10 @@ section, footer {
     object-fit: cover; }
 
 .gallery {
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  padding-top: 11.3rem; }
   .gallery:not(:last-child) {
-    margin-bottom: 2rem; }
+    margin-bottom: 5rem; }
   .gallery__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -158,8 +163,9 @@ section, footer {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 6rem;
   padding: 4rem;
-  margin-bottom: -5rem;
-  font-family: "Montserrat",sans-serif; }
+  margin-top: 7rem;
+  font-family: "Montserrat",sans-serif;
+  margin-bottom: 5rem; }
 
 .form__input {
   width: 90%;
@@ -182,13 +188,13 @@ section, footer {
 .footer {
   grid-column: full-start / full-end;
   display: flex;
-  padding: 5rem;
+  padding: 3rem;
   font-family: "Montserrat",sans-serif;
-  font-size: 1.7rem;
-  align-items: center;
-  margin-bottom: -10rem; }
+  font-size: 1.7rem; }
   .footer small {
-    margin-right: auto; }
+    margin-right: auto;
+    padding-top: 2.1rem;
+    border-top: 1px solid black; }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
@@ -239,7 +245,6 @@ section, footer {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   transition: all .4s; }
 
 .btn--animated {
@@ -269,7 +274,8 @@ section, footer {
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 6rem; }
+  grid-gap: 6rem;
+  padding-top: 11.8rem; }
   .about--me {
     grid-column: 1 span 1; }
   .about--history {
@@ -303,7 +309,8 @@ section, footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;
-  font-family: "Montserrat",sans-serif; }
+  font-family: "Montserrat",sans-serif;
+  padding-top: 11.8rem; }
   .services__item {
     display: flex;
     flex-direction: column;
@@ -328,27 +335,26 @@ section, footer {
 
 .reviews {
   grid-column: center-start / center-end;
-  display: grid;
-  background: rgba(128, 128, 128, 0.1);
   background-size: cover;
   background-position: center;
-  padding: 3rem; }
+  padding-top: 11.8rem; }
   .reviews__button {
     grid-column: center-start / center-end;
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    padding: 4rem;
+    background: rgba(128, 128, 128, 0.1); }
 
 #google-reviews {
-  grid-column: center-start / center-end;
+  grid-column: full-start / center-end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
+  padding: 4rem;
   font-family: "Montserrat",sans-serif;
-  margin-bottom: 2rem; }
+  background: rgba(128, 128, 128, 0.1); }
 
 .review-item {
-  margin: 0 auto;
-  padding: 1em;
   flex: 1 1 20%;
   font-size: 1.65rem; }
 
