@@ -175,6 +175,9 @@ section {
   font-family: "Montserrat",sans-serif;
   resize: none; }
 
+.form__textarea {
+  margin-bottom: 4rem; }
+
 .works {
   display: flex;
   flex-direction: column;
