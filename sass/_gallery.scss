@@ -51,4 +51,6 @@
   
    .video img:hover, .video img:active, .video img:focus {
      opacity: 0.75;
+     transform: scale(1.2) ;
+     transition: all .3s ease-in-out;
    }

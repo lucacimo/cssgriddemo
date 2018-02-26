@@ -11,7 +11,6 @@
         font-size: 1.8rem;
         font-family: Montserrat,sans-serif;
         
-        //Change for the <button> element
         border: none;
         cursor: pointer;
     }
@@ -49,6 +48,11 @@
         &::after {
             background-color: $color-primary;
         }
+    }
+
+    &--gray {
+        background: linear-gradient(to bottom right, $color-grey-light-1, $color-grey-light-2);
+        color: $color-grey-dark;
     }
     
     &::after {
