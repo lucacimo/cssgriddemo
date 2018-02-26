@@ -10,12 +10,12 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Gennaro Langella website</title>
-        <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-        <link  href="/js/fancybox-master/dist/jquery.fancybox.min.css" rel="stylesheet">
-        <script src="/js/fancybox-master/dist/jquery.fancybox.min.js"></script>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link  href="js/fancybox-master/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <script src="js/fancybox-master/dist/jquery.fancybox.min.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-        <script src="/js/google-places.js"></script>
+        <script src="js/google-places.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCR8X8VWyXOD6ZFZCIm1wq3-6wt85i4byY&signed_in=true&libraries=places"></script>
         <script>
             $(document).ready(function() {
@@ -38,7 +38,7 @@
                     placeId: 'ChIJ5WdstxkJOxMRLE4Olc2p9yI' //Find placeID @: https://developers.google.com/places/place-id
                     , render: ['reviews']
                     , min_rating: 2
-                    , max_rows: 4
+                    , max_rows: 2
                 });
             });
         </script>
@@ -130,8 +130,8 @@
                 <div id="google-reviews">
                 </div>
                 <div class="reviews__button">
-                    <a href="https://www.google.it/search?ei=2EGRWo2BFMz-UJ66megH&q=50+kalo&oq=50+kalo&gs_l=psy-ab.3..35i39k1j0l9.440685.442796.0.443012.8.8.0.0.0.0.90.538.7.8.0....0...1c.1.64.psy-ab..0.8.663.6..0i131k1j0i67k1j0i3k1j0i10k1.127.a_dGmIwBxeo#lrd=0x133b0919b76c67e5:0x22f7a9cd950e4e2c,3,,," class="btn btn--white btn--animated">Leave a review</a>
-                    <a href="https://www.google.it/search?ei=2EGRWo2BFMz-UJ66megH&q=50+kalo&oq=50+kalo&gs_l=psy-ab.3..35i39k1j0l9.440685.442796.0.443012.8.8.0.0.0.0.90.538.7.8.0....0...1c.1.64.psy-ab..0.8.663.6..0i131k1j0i67k1j0i3k1j0i10k1.127.a_dGmIwBxeo#lrd=0x133b0919b76c67e5:0x22f7a9cd950e4e2c,1,,," class="btn btn--white btn--animated">Show me all reviews</a>
+                    <a href="https://www.google.it/search?ei=2EGRWo2BFMz-UJ66megH&q=50+kalo&oq=50+kalo&gs_l=psy-ab.3..35i39k1j0l9.440685.442796.0.443012.8.8.0.0.0.0.90.538.7.8.0....0...1c.1.64.psy-ab..0.8.663.6..0i131k1j0i67k1j0i3k1j0i10k1.127.a_dGmIwBxeo#lrd=0x133b0919b76c67e5:0x22f7a9cd950e4e2c,3,,," class="btn btn--red btn--animated">Leave a review</a>
+                    <a href="https://www.google.it/search?ei=2EGRWo2BFMz-UJ66megH&q=50+kalo&oq=50+kalo&gs_l=psy-ab.3..35i39k1j0l9.440685.442796.0.443012.8.8.0.0.0.0.90.538.7.8.0....0...1c.1.64.psy-ab..0.8.663.6..0i131k1j0i67k1j0i3k1j0i10k1.127.a_dGmIwBxeo#lrd=0x133b0919b76c67e5:0x22f7a9cd950e4e2c,1,,," class="btn btn--red btn--animated">Show me all reviews</a>
                 </div>
             </section>
             
@@ -234,7 +234,6 @@
                 </div>
                 <div class="contact" id="#">
                     <form id="gform" class="form" method="post" action="https://script.google.com/macros/s/AKfycbwMdt3VHAOoXqpfp8IIHvhgHfbmWmKIX48lbgvt00xz0VxQAHQ/exec">
-                                                
                         <h5 class="heading--tertiary">Contact me</h5>
                         <div>
                             <input type="text" class="form__input" id="name" placeholder="Name and Surname" name="name" required="" aria-required="true">

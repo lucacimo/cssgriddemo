@@ -33,8 +33,12 @@ section, footer {
 
 .header {
   grid-column: full-start / full-end;
-  background: rgba(0, 0, 0, 0.3);
-  position: relative; }
+  background: black;
+  position: relative;
+  background-image: url("../img/oven.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 1; }
 
 .navigation {
   display: flex;
@@ -97,7 +101,8 @@ section, footer {
   width: 100%;
   z-index: -1;
   opacity: .9;
-  overflow: hidden; }
+  overflow: hidden;
+  visibility: hidden; }
   .bg-video__content {
     height: 100%;
     width: 100%;
@@ -161,7 +166,6 @@ section, footer {
   width: 90%;
   margin-bottom: 1.2rem;
   padding: 1rem;
-  border-radius: 2rem;
   font-size: 1.6rem;
   font-family: "Montserrat",sans-serif;
   resize: none; }
@@ -222,6 +226,12 @@ section, footer {
   color: #fff; }
   .btn--green::after {
     background-color: #c69963; }
+
+.btn--red {
+  background-color: #FF4C4C;
+  color: #fff; }
+  .btn--red::after {
+    background-color: #FF4C4C; }
 
 .btn::after {
   content: "";
@@ -306,7 +316,7 @@ section, footer {
   .services__name {
     z-index: 3;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 1.25rem;
     background-color: red;
@@ -322,9 +332,6 @@ section, footer {
 .reviews {
   grid-column: center-start / center-end;
   display: grid;
-  background-image: url("../img/oven.jpg");
-  background-size: cover;
-  background-position: center;
   padding: 2rem; }
   .reviews__button {
     grid-column: center-start / center-end;
@@ -336,16 +343,14 @@ section, footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
-  color: white;
   font-family: "Montserrat",sans-serif;
   margin-bottom: 2rem; }
 
 .review-item {
-  border: solid 1px rgba(190, 190, 190, 0.35);
   margin: 0 auto;
   padding: 1em;
   flex: 1 1 20%;
-  font-size: 1.65rem; }
+  font-size: 1.5rem; }
 
 .reviewer-image {
   width: 6rem;
@@ -375,7 +380,8 @@ img {
 
 .review-stars {
   text-align: center;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  font-size: 1rem; }
 
 .review-author {
   text-transform: capitalize;
@@ -430,7 +436,7 @@ img {
     border-top: 1px solid black; }
 
 .list__item--white {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: white; }
 
 .list__item--black {
