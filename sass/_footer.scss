@@ -4,11 +4,33 @@
     padding: 3rem;
     font-family: "Montserrat",sans-serif;
     font-size: 1.7rem;
-    //align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+
+    &__container {
+        padding-top: 1rem;
+        border-top: 1px solid black;
+        display:flex;
+
+        @media only screen and (max-width: $bp-medium) {
+            //align-content: space-between;
+            flex: 1;
+            margin: auto;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            order: 1;
+          }
+    }
 
     & small {
         margin-right: auto;
-        padding-top: 2.1rem;
-        border-top: 1px solid black;
-    } 
+        padding-top: 1rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: auto;
+            order: 2;
+        }
+    }
 }

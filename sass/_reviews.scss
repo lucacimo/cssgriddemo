@@ -48,13 +48,20 @@ img {
     height: auto;
 }
 
-@media ( max-width:1200px) {
-  .review-item { flex: 1 1 40%; }
-}
+// @media ( max-width:1200px) {
+//   .review-item { flex: 1 1 40%; }
+// }
 
-@media ( max-width:450px) {
-  .review-item { flex: 1 1 90%; }
-}
+@media ( max-width:$bp-large) {
+    .review-text {
+        font-size: 10rem;
+    }
+  }
+
+
+// @media ( max-width:450px) {
+//   .review-item { flex: 1 1 90%; }
+// }
 
 .review-meta {
     display: flex;

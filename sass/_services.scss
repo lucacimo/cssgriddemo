@@ -1,7 +1,7 @@
 .services {
     grid-column: center-start / center-end;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));
     grid-gap: 6rem;
     font-family: "Montserrat",sans-serif;
     padding-top: 11.8rem;

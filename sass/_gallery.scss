@@ -8,9 +8,13 @@
 
     &__container {
       display: grid;
-      grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(4, 1fr); //repeat( auto-fit, minmax(200px, 1fr));
       grid-gap: 4rem;  
       margin-bottom: 2rem;
+
+      @media only screen and (max-width: $bp-medium-small) {
+        grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
   .video {
