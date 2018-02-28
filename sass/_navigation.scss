@@ -4,9 +4,23 @@
     align-items: center;
     list-style: none;
     font-family: Montserrat,sans-serif;
+    visibility: visible;
 
     @media only screen and (max-width: $bp-medium-small) {
-        display: none;
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        padding: 3rem;
+        border-radius: 8px;
+        top: 11rem;
+        right: 0; 
+        visibility: hidden;
+        
+        & li {
+            margin-bottom: 3rem;
+        }
     }
 
     &__item--white {
@@ -43,6 +57,14 @@
     list-style: none;
 
     @media only screen and (max-width: $bp-medium-small) {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 2rem;
+        border-radius: 8px;
+        top: 39rem;
+        right: 0; 
         visibility: hidden;
     }
 
@@ -68,17 +90,11 @@
 }
 
 .hamburger__icon {
-    visibility: hidden;
     color: white;
+    display: none;
     margin-right: 2rem;
 
     @media only screen and (max-width: $bp-medium-small) {
-        visibility: visible;
+        display: inline-block;
     }
-
-    @media only screen and (max-width: $bp-small) {
-        visibility: visible;
-        margin-right: 2rem;
-    }
-
 }

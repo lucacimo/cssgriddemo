@@ -8,12 +8,13 @@
 
     &__container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); //repeat( auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       grid-gap: 4rem;  
       margin-bottom: 2rem;
 
       @media only screen and (max-width: $bp-medium-small) {
         grid-template-columns: repeat(2, 1fr);
+
     }
   }
 }
@@ -29,12 +30,10 @@
   }
 
   .video h2 {
-    //font-family: 'Sorts Mill Goudy', serif;  
     font-size: 18px;
     font-weight: 400;
     line-height: 1.25;
     color: #555;
-    //text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
     padding: 1.5rem .8rem;

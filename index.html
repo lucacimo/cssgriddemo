@@ -60,14 +60,14 @@
                 </div>
                 <nav class="navigation" id="navbar">
                     <img src="img/logo.png" alt="brand logo" class="logo" id="logo">
-                    <ul class="navigation__list">
+                    <ul class="navigation__list" id="navigation__list">
                         <li><a id="home-link" class="navigation__list__item--white" href="#header">Home</a></li>
                         <li><a id="about-link" class="navigation__list__item--white" href="#about">About</a></li>
                         <li><a id="reviews-link" class="navigation__list__item--white" href="#reviews">Reviews</a></li>
                         <li><a id="gallery-link" class="navigation__list__item--white" href="#gallery">Gallery</a></li>
                         <li><a id="contact-link" class="navigation__list__item--white" href="#contact">Contact</a></li>
                     </ul>   
-                    <ul class="social__list">
+                    <ul class="social__list" id="social__list">
                         <li>
                             <a class="social__list__item--white" href="https://www.facebook.com/gennarolangellaconsulting/">
                                 <i class="fab fa-facebook fa-2x"></i>
@@ -84,7 +84,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a class="hamburger__icon"><i class="fas fa-bars fa-5x"></i></a>
+                    <a class="hamburger__icon" id="hamburger"><i id="nav-icon" class="fas fa-bars fa-5x"></i></a>
                 </nav>
             </header>
 
@@ -298,14 +298,39 @@
                
                // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
                function myFunction() {
-                 if (window.pageYOffset >= sticky) {
-                   navbar.classList.add("sticky");
-                   logo.classList.add("logosticky");
+
+                    var list = document.getElementById("navigation__list");
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
+                        logo.classList.add("logosticky");
+                        list.style.backgroundColor = "#101d2c";
                  } else {
                    navbar.classList.remove("sticky");
                    logo.classList.remove("logosticky");
+                   list.style.backgroundColor = "transparent";
                  }
                }            
+           </script>
+           <script>
+                var hamburger = document.getElementById("hamburger");
+                var open = false;
+                hamburger.addEventListener("click", function(){
+
+                    if (open) {
+                        document.getElementById("navigation__list").style.visibility = "hidden";
+                        document.getElementById("social__list").style.visibility="hidden";
+                        document.getElementById("nav-icon").classList.add("fas", "fa-bars");
+                        document.getElementById("nav-icon").classList.remove("far", "fa-window-close");
+                        open = false;
+                    }
+                    else{
+                        document.getElementById("navigation__list").style.visibility = "visible";
+                        document.getElementById("social__list").style.visibility="visible";
+                        document.getElementById("nav-icon").classList.add("far", "fa-window-close");
+                        document.getElementById("nav-icon").classList.remove("fas", "fa-bars");
+                        open = true;
+                    }
+                });         
            </script>
     </body>
 </html>

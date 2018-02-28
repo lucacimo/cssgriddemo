@@ -15,7 +15,6 @@
         display:flex;
 
         @media only screen and (max-width: $bp-medium) {
-            //align-content: space-between;
             flex: 1;
             margin: auto;
             margin-bottom: 2rem;
