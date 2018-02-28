@@ -20,7 +20,7 @@ section {
 
 .container {
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, 1fr) [center-end] 1fr [full-end]; }
 
 .spacing {
   grid-column: 5 / 7;
@@ -38,8 +38,7 @@ section {
     .header {
       height: 90vh;
       background: url(../img/pizza.jpg);
-      background-size: cover;
-      background-repeat: no-repeat; } }
+      background-size: cover; } }
 
 .navigation {
   display: flex;
