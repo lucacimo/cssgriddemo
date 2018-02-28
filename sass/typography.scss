@@ -14,4 +14,8 @@
     line-height: 2;
     color: #777;
     margin-top: 2rem;
+
+    @media only screen and (max-width: $bp-medium-small) {
+        font-size: 2rem;
+    }
 }
