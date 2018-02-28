@@ -40,46 +40,24 @@ $bp-small: 46.25em;
 html {
     box-sizing: border-box;
     font-size: 62.5%;   // 10/16px = 62.5% -> 1rem = 10px
-
     @media only screen and (max-width: $bp-large) {
         font-size: 55%;
     }
 }
 
 body {
-    width: 100%;
-    //font-family: $font-primary;
-    //color: $color-grey-dark-2;
-    //font-weight: 300;
-    //line-height: 1.6;
-    //background-color: #F5F5F5;
-
     font-family: Montserrat,sans-serif;
-    //font-weight: 300;
-    //font-size: 1.125em;
-    //line-height: 1.55;
 }
 
 section {
-    //margin-top: 11.3rem;
     margin-bottom: 11.3rem;
-    //padding-top: 11.3rem;
 }
 
 
 .container {
     display: grid;
-    //grid-template-rows: 100vh;
     grid-template-columns: [full-start]  minmax(6rem, 1fr) [center-start] 
     repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-
-    @media only screen and (max-width: $bp-small) {
-        //grid-template-columns: [full-start]  minmax(2rem, 1fr) [center-start];
-        //grid-auto-columns: min-content;
-        //grid-auto-columns: minmax(10px, auto);
-        grid-template-columns: [full-start]  minmax(min-content, 1fr) [center-start] 
-        repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(min-content, 1fr) [full-end];
-    }
 }
 
 .spacing {

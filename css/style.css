@@ -13,7 +13,6 @@ html {
       font-size: 55%; } }
 
 body {
-  width: 100%;
   font-family: Montserrat,sans-serif; }
 
 section {
@@ -22,9 +21,6 @@ section {
 .container {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  @media only screen and (max-width: 46.25em) {
-    .container {
-      grid-template-columns: [full-start] minmax(min-content, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(min-content, 1fr) [full-end]; } }
 
 .spacing {
   grid-column: 5 / 7;
@@ -40,9 +36,10 @@ section {
   height: 100vh; }
   @media only screen and (max-width: 53.75em) {
     .header {
-      height: 80vh;
+      height: 90vh;
       background: url(../img/pizza.jpg);
-      background-size: cover; } }
+      background-size: cover;
+      background-repeat: no-repeat; } }
 
 .navigation {
   display: flex;
@@ -67,6 +64,9 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center; }
+  @media only screen and (max-width: 53.75em) {
+    .header__text-box {
+      transform: translate(-50%, -50%); } }
 
 .heading-primary {
   color: #fff;
@@ -105,6 +105,9 @@ section {
   z-index: -1;
   opacity: .9;
   overflow: hidden; }
+  @media only screen and (max-width: 53.75em) {
+    .bg-video {
+      visibility: hidden; } }
   .bg-video__content {
     height: 100%;
     width: 100%;
@@ -328,9 +331,6 @@ section {
   line-height: 2;
   color: #777;
   margin-top: 2rem; }
-  @media only screen and (max-width: 68.75em) {
-    .paragraph {
-      font-size: 2rem; } }
 
 .services {
   grid-column: center-start / center-end;
@@ -463,13 +463,16 @@ img {
       position: absolute;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      align-items: center;
       list-style: none;
       padding: 3rem;
       border-radius: 8px;
-      top: 11rem;
+      top: 10rem;
       right: 0;
-      visibility: hidden; }
+      width: 40%;
+      visibility: hidden;
+      background-color: #101d2c; }
       .navigation__list li {
         margin-bottom: 3rem; } }
   .navigation__list__item--white {
@@ -497,12 +500,13 @@ img {
   @media only screen and (max-width: 53.75em) {
     .social__list {
       position: absolute;
+      width: 40%;
       display: flex;
       justify-content: space-between;
       list-style: none;
       padding: 2rem;
       border-radius: 8px;
-      top: 39rem;
+      top: 38rem;
       right: 0;
       visibility: hidden; } }
   .social__list__item--white {

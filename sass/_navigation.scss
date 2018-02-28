@@ -1,5 +1,5 @@
 .navigation__list {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
@@ -10,13 +10,17 @@
         position: absolute;
         display:flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: center;
         list-style: none;
         padding: 3rem;
         border-radius: 8px;
-        top: 11rem;
+        top: 10rem;
         right: 0; 
+        width: 40%;
         visibility: hidden;
+        background-color: #101d2c;
+        
         
         & li {
             margin-bottom: 3rem;
@@ -58,12 +62,13 @@
 
     @media only screen and (max-width: $bp-medium-small) {
         position: absolute;
+        width: 40%;
         display: flex;
         justify-content: space-between;
         list-style: none;
         padding: 2rem;
         border-radius: 8px;
-        top: 39rem;
+        top: 38rem;
         right: 0; 
         visibility: hidden;
     }

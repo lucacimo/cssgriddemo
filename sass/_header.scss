@@ -8,9 +8,11 @@
     height: 100vh;
 
     @media only screen and (max-width: $bp-medium-small) {
-        height: 80vh;
+        height: 90vh;
         background: url(../img/pizza.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
+        //background-size: 100%;
     }
 }
 
@@ -39,6 +41,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium-small) {
+        transform: translate(-50%, -50%);
+    }
 }
 
 .heading-primary {
@@ -87,6 +93,10 @@
     z-index: -1;
     opacity: .9;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium-small) {
+        visibility: hidden;
+    }
 
     &__content {
         height: 100%;
