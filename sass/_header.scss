@@ -8,7 +8,9 @@
     height: 100vh;
 
     @media only screen and (max-width: $bp-medium-small) {
-        height: 75vh;
+        height: 80vh;
+        background: url(../img/pizza.jpg);
+        background-size: cover;
     }
 }
 

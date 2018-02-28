@@ -40,7 +40,9 @@ section {
   height: 100vh; }
   @media only screen and (max-width: 53.75em) {
     .header {
-      height: 75vh; } }
+      height: 80vh;
+      background: url(../img/pizza.jpg);
+      background-size: cover; } }
 
 .navigation {
   display: flex;
