@@ -4,14 +4,14 @@
     grid-column: full-start / full-end;
     background: rgba(black, 0.3);
     position: relative;
-    margin-bottom: 11.3rem;
+    margin-bottom: 11.8rem;
     height: 100vh;
 
     @media only screen and (max-width: $bp-medium-small) {
         height: 85vh;
         background: url(../img/pizza.jpg);
         background-size: cover;
-                
+        margin-bottom: 5rem;        
     }
 
     @media only screen and (max-width: $bp-small) {
@@ -20,6 +20,10 @@
 
     @media only screen and (max-width: $bp-smallest) {
         height: 60vh; 
+    }
+
+    @media only screen and (max-width: $bp-super-small) {
+        height: 50vh; 
     }
 }
 

@@ -25,7 +25,12 @@ body {
   font-family: Montserrat,sans-serif; }
 
 section {
-  margin-bottom: 11.3rem; }
+  margin-bottom: 11.8rem;
+  padding-top: 11.8rem; }
+  @media only screen and (max-width: 53.75em) {
+    section {
+      margin-bottom: 5rem;
+      padding-top: 5rem; } }
 
 .container {
   display: grid;
@@ -44,19 +49,23 @@ section {
   grid-column: full-start / full-end;
   background: rgba(0, 0, 0, 0.3);
   position: relative;
-  margin-bottom: 11.3rem;
+  margin-bottom: 11.8rem;
   height: 100vh; }
   @media only screen and (max-width: 53.75em) {
     .header {
       height: 85vh;
       background: url(../img/pizza.jpg);
-      background-size: cover; } }
+      background-size: cover;
+      margin-bottom: 5rem; } }
   @media only screen and (max-width: 46.25em) {
     .header {
       height: 70vh; } }
   @media only screen and (max-width: 37.5em) {
     .header {
       height: 60vh; } }
+  @media only screen and (max-width: 28em) {
+    .header {
+      height: 50vh; } }
 
 .navigation {
   display: flex;
@@ -129,8 +138,7 @@ section {
     object-fit: cover; }
 
 .gallery {
-  grid-column: center-start / center-end;
-  padding-top: 11.3rem; }
+  grid-column: center-start / center-end; }
   .gallery:not(:last-child) {
     margin-bottom: 5rem; }
   .gallery__container {
@@ -336,8 +344,7 @@ section {
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 6rem;
-  padding-top: 11.8rem; }
+  grid-gap: 6rem; }
   .about--me {
     grid-column: 1 span 1; }
   .about--history {
@@ -378,8 +385,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 6rem;
-  font-family: "Montserrat",sans-serif;
-  padding-top: 11.8rem; }
+  font-family: "Montserrat",sans-serif; }
   .services__item {
     display: flex;
     flex-direction: column;
@@ -405,14 +411,17 @@ section {
 .reviews {
   grid-column: center-start / center-end;
   background-size: cover;
-  background-position: center;
-  padding-top: 11.8rem; }
+  background-position: center; }
   .reviews__button {
     grid-column: center-start / center-end;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 4rem;
-    background: rgba(128, 128, 128, 0.1); }
+    background: rgba(128, 128, 128, 0.1);
+    padding: 2rem; }
+    @media only screen and (max-width: 46.25em) {
+      .reviews__button a {
+        margin-bottom: 3rem; } }
 
 #google-reviews {
   display: flex;
@@ -420,7 +429,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
-  padding: 4rem;
+  padding: 2rem;
   font-family: "Montserrat",sans-serif;
   background: rgba(128, 128, 128, 0.1); }
   @media only screen and (max-width: 46.25em) {
@@ -432,7 +441,7 @@ section {
   font-size: 1.65rem; }
 
 .reviewer-image {
-  width: 6rem;
+  width: 8rem;
   margin: .6rem;
   margin-right: 2rem; }
 
@@ -447,15 +456,12 @@ img {
   justify-content: center;
   align-items: center;
   white-space: pre;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-size: 2.2rem; }
 
 .review-stars {
   text-align: center;
   margin-bottom: 2rem; }
-
-.review-author {
-  text-transform: capitalize;
-  font-weight: bold; }
 
 .review-date {
   display: block; }
@@ -464,7 +470,7 @@ img {
   line-height: 1.55;
   text-align: left;
   max-width: 32em;
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: #777;
   margin: auto; }
 
@@ -507,7 +513,7 @@ img {
       justify-content: flex-start;
       align-items: center;
       list-style: none;
-      padding: 3rem;
+      padding: 4rem;
       border-radius: 8px;
       top: 10rem;
       right: 0;
