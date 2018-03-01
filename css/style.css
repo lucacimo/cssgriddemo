@@ -362,7 +362,7 @@ section {
         align-items: center; } }
     @media only screen and (max-width: 49em) {
       .about--me {
-        margin-bottom: 2rem; } }
+        margin-bottom: 3rem; } }
   .about--history {
     grid-column: 2 span 1; }
     @media only screen and (max-width: 49em) {
@@ -386,7 +386,7 @@ section {
 
 .heading--tertiary {
   font-family: "Montserrat",sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #777;
   text-align: center;
@@ -425,7 +425,7 @@ section {
     z-index: 1; }
   .services__name {
     z-index: 3;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     padding: 1.25rem;
     background-color: red;
