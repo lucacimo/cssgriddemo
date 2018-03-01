@@ -65,7 +65,7 @@ section {
       height: 60vh; } }
   @media only screen and (max-width: 28em) {
     .header {
-      height: 50vh; } }
+      height: 45vh; } }
   @media all and (orientation: landscape) {
     .header {
       height: 100vh; } }
@@ -89,13 +89,13 @@ section {
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   text-align: center; }
 
 .heading-primary {
   color: #fff;
   backface-visibility: hidden;
-  margin-bottom: 6rem; }
+  margin-bottom: 4rem; }
   .heading-primary--main {
     display: block;
     font-size: 7rem;

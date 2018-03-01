@@ -23,7 +23,7 @@
     }
 
     @media only screen and (max-width: $bp-super-small) {
-        height: 50vh; 
+        height: 45vh; 
     }
 
     @media all and (orientation: landscape) {
@@ -52,14 +52,14 @@
     position: absolute;
     top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
     text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     backface-visibility: hidden;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 
 
     &--main {
