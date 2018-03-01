@@ -6,10 +6,24 @@
     font-family: "Montserrat",sans-serif;
     //padding-top: 11.8rem;
 
+    @media only screen and (max-width: $bp-smallest) {
+        display: flex;
+        //align-content: flex-start;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        
+    }
+
+    
+
     &__item{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__img {
@@ -18,7 +32,7 @@
 
     &__name {
         z-index: 3;
-        width: 100%;
+        //width: 100%;
         font-size: 2rem;
         text-align: center;
         padding: 1.25rem;

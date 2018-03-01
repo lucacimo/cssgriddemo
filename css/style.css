@@ -383,15 +383,22 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 6rem;
   font-family: "Montserrat",sans-serif; }
+  @media only screen and (max-width: 37.5em) {
+    .services {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem; } }
   .services__item {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
+    @media only screen and (max-width: 37.5em) {
+      .services__item {
+        margin-bottom: 3rem; } }
   .services__img {
     z-index: 1; }
   .services__name {
     z-index: 3;
-    width: 100%;
     font-size: 2rem;
     text-align: center;
     padding: 1.25rem;
