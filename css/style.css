@@ -11,6 +11,15 @@ html {
   @media only screen and (max-width: 68.75em) {
     html {
       font-size: 55%; } }
+  @media only screen and (max-width: 53.75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 46.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
 
 body {
   font-family: Montserrat,sans-serif; }
@@ -39,9 +48,15 @@ section {
   height: 100vh; }
   @media only screen and (max-width: 53.75em) {
     .header {
-      height: 90vh;
+      height: 85vh;
       background: url(../img/pizza.jpg);
       background-size: cover; } }
+  @media only screen and (max-width: 46.25em) {
+    .header {
+      height: 70vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      height: 60vh; } }
 
 .navigation {
   display: flex;
@@ -175,7 +190,11 @@ section {
   margin-bottom: 5rem; }
   @media only screen and (max-width: 46.25em) {
     .contactme {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      grid-gap: 1rem; } }
+
+.contact {
+  text-align: center; }
 
 .form__input {
   width: 90%;
@@ -187,6 +206,9 @@ section {
 
 .form__textarea {
   margin-bottom: 4rem; }
+  @media only screen and (max-width: 46.25em) {
+    .form__textarea {
+      margin-bottom: 2rem; } }
 
 .works {
   display: flex;
@@ -194,10 +216,16 @@ section {
   justify-content: space-around;
   color: white;
   font-size: 1.7rem; }
+  @media only screen and (max-width: 46.25em) {
+    .works {
+      justify-content: space-between; } }
   .works li {
     padding: 2rem;
     margin-bottom: 2rem;
     list-style: none; }
+    @media only screen and (max-width: 46.25em) {
+      .works li {
+        margin-bottom: 1rem; } }
 
 .footer {
   grid-column: full-start / full-end;
@@ -219,6 +247,9 @@ section {
         margin-bottom: 2rem;
         padding: 1rem;
         order: 1; } }
+    @media only screen and (max-width: 53.75em) {
+      .footer__container {
+        display: none; } }
   .footer small {
     margin-right: auto;
     padding-top: 1rem; }

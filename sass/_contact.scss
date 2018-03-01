@@ -11,7 +11,13 @@
 
     @media only screen and (max-width: $bp-small) {
         grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        //text-align: center
     }
+}
+
+.contact {
+    text-align: center;
 }
 
 .form__input {
@@ -22,10 +28,17 @@
         font-family: "Montserrat",sans-serif;
         resize: none;
 
+        @media only screen and (max-width: $bp-small) {
+            //text-align: center;
+        }
     }
 
 .form__textarea {
     margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 2rem;
+    }
 } 
 
 .works {
@@ -34,11 +47,19 @@
     justify-content: space-around;
     color: white;
 
+    @media only screen and (max-width: $bp-small) {
+        justify-content: space-between;
+    }
+
     font-size: 1.7rem;
 
     & li {
         padding: 2rem;
         margin-bottom: 2rem;
         list-style: none;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: 1rem;
+        }
     }
 }
