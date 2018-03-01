@@ -63,9 +63,6 @@ section {
   @media only screen and (max-width: 37.5em) {
     .header {
       height: 60vh; } }
-  @media only screen and (max-width: 28em) {
-    .header {
-      height: 50vh; } }
 
 .navigation {
   display: flex;
