@@ -22,6 +22,8 @@
 }
 
 #google-reviews {
+    display: flex;
+
     grid-column: full-start / center-end;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -29,6 +31,10 @@
     padding: 4rem;
     font-family: "Montserrat",sans-serif;
     background: rgba(gray, 0.1);
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .review-item {
@@ -52,11 +58,11 @@ img {
 //   .review-item { flex: 1 1 40%; }
 // }
 
-@media ( max-width:$bp-large) {
-    .review-text {
-        font-size: 10rem;
-    }
-  }
+// @media ( max-width:$bp-large) {
+//     .review-text {
+//         font-size: 10rem;
+//     }
+//   }
 
 
 // @media ( max-width:450px) {

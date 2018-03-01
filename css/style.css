@@ -173,6 +173,9 @@ section {
   margin-top: 7rem;
   font-family: "Montserrat",sans-serif;
   margin-bottom: 5rem; }
+  @media only screen and (max-width: 46.25em) {
+    .contactme {
+      grid-template-columns: 1fr; } }
 
 .form__input {
   width: 90%;
@@ -315,6 +318,10 @@ section {
     margin-right: 1rem;
     border-radius: 50%;
     shape-outside: circle(); }
+    @media only screen and (max-width: 46.25em) {
+      .about__img {
+        width: 15rem;
+        height: 15rem; } }
 
 .heading--tertiary {
   font-family: "Montserrat",sans-serif;
@@ -377,6 +384,7 @@ section {
     background: rgba(128, 128, 128, 0.1); }
 
 #google-reviews {
+  display: flex;
   grid-column: full-start / center-end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -384,6 +392,9 @@ section {
   padding: 4rem;
   font-family: "Montserrat",sans-serif;
   background: rgba(128, 128, 128, 0.1); }
+  @media only screen and (max-width: 46.25em) {
+    #google-reviews {
+      grid-template-columns: 1fr; } }
 
 .review-item {
   flex: 1 1 20%;
@@ -399,10 +410,6 @@ img {
   vertical-align: middle;
   max-width: 100%;
   height: auto; }
-
-@media (max-width: 68.75em) {
-  .review-text {
-    font-size: 10rem; } }
 
 .review-meta {
   display: flex;

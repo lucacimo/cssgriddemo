@@ -19,6 +19,12 @@
 	    float: left;
         margin-right: 1rem;
         border-radius: 50%; 
-	    shape-outside: circle();
+        shape-outside: circle();
+        
+        @media only screen and (max-width: $bp-small) {
+            width: 15rem;
+            height: 15rem;
+            //display: block;
+        }
     }
 }
