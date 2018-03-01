@@ -63,6 +63,9 @@ section {
   @media only screen and (max-width: 37.5em) {
     .header {
       height: 60vh; } }
+  @media only screen and (max-width: 28em) {
+    .header {
+      height: 45vh; } }
 
 .navigation {
   display: flex;
@@ -85,9 +88,6 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center; }
-  @media only screen and (max-width: 53.75em) {
-    .header__text-box {
-      transform: translate(-50%, -50%); } }
 
 .heading-primary {
   color: #fff;
@@ -99,6 +99,9 @@ section {
     font-weight: 600;
     letter-spacing: 1.5rem;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 28em) {
+      .heading-primary--main {
+        font-size: 5rem; } }
   .heading-primary--sub {
     font-size: 2.5rem;
     font-weight: 300; }
@@ -342,8 +345,15 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      display: flex;
+      flex-direction: column; } }
   .about--me {
     grid-column: 1 span 1; }
+    @media only screen and (max-width: 37.5em) {
+      .about--me {
+        margin-bottom: 2rem; } }
   .about--history {
     grid-column: 2 span 1; }
   .about__img {
