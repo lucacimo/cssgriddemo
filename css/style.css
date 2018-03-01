@@ -447,7 +447,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: rgba(128, 128, 128, 0.1);
     padding: 2rem; }
     @media only screen and (max-width: 49em) {
       .reviews__button a {
@@ -460,8 +459,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
   padding: 2rem;
-  font-family: "Montserrat",sans-serif;
-  background: rgba(128, 128, 128, 0.1); }
+  font-family: "Montserrat",sans-serif; }
   @media only screen and (max-width: 49em) {
     #google-reviews {
       grid-template-columns: 1fr; } }
