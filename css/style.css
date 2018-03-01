@@ -549,6 +549,7 @@ img {
       visibility: hidden;
       background-color: #101d2c; }
       .navigation__list li {
+        padding: 1rem;
         margin-bottom: 3rem; } }
   .navigation__list__item--white {
     font-size: 2rem;
