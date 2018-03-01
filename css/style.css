@@ -14,7 +14,7 @@ html {
   @media only screen and (max-width: 53.75em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 49em) {
     html {
       font-size: 50%; } }
   @media only screen and (max-width: 37.5em) {
@@ -35,7 +35,7 @@ section {
 .container {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 49em) {
     .container {
       grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] 1fr [full-end]; } }
 
@@ -57,7 +57,7 @@ section {
       background: url(../img/pizza.jpg);
       background-size: cover;
       margin-bottom: 5rem; } }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 49em) {
     .header {
       height: 70vh; } }
   @media only screen and (max-width: 37.5em) {
@@ -199,7 +199,7 @@ section {
   margin-top: 7rem;
   font-family: "Montserrat",sans-serif;
   margin-bottom: 5rem; }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 49em) {
     .contactme {
       grid-template-columns: 1fr;
       grid-gap: 1rem; } }
@@ -217,7 +217,7 @@ section {
 
 .form__textarea {
   margin-bottom: 4rem; }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 49em) {
     .form__textarea {
       margin-bottom: 2rem; } }
 
@@ -227,14 +227,14 @@ section {
   justify-content: space-around;
   color: white;
   font-size: 1.7rem; }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 49em) {
     .works {
       justify-content: space-between; } }
   .works li {
     padding: 2rem;
     margin-bottom: 2rem;
     list-style: none; }
-    @media only screen and (max-width: 46.25em) {
+    @media only screen and (max-width: 49em) {
       .works li {
         margin-bottom: 1rem; } }
 
@@ -354,11 +354,23 @@ section {
       flex-direction: column; } }
   .about--me {
     grid-column: 1 span 1; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 49em) {
+      .about--me {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    @media only screen and (max-width: 49em) {
       .about--me {
         margin-bottom: 2rem; } }
   .about--history {
     grid-column: 2 span 1; }
+    @media only screen and (max-width: 49em) {
+      .about--history {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
   .about__img {
     width: 20rem;
     height: 20rem;
@@ -366,14 +378,15 @@ section {
     margin-right: 1rem;
     border-radius: 50%;
     shape-outside: circle(); }
-    @media only screen and (max-width: 46.25em) {
+    @media only screen and (max-width: 49em) {
       .about__img {
         width: 15rem;
-        height: 15rem; } }
+        height: 15rem;
+        margin-bottom: 2rem; } }
 
 .heading--tertiary {
   font-family: "Montserrat",sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #777;
   text-align: center;
@@ -436,7 +449,7 @@ section {
     justify-content: space-around;
     background: rgba(128, 128, 128, 0.1);
     padding: 2rem; }
-    @media only screen and (max-width: 46.25em) {
+    @media only screen and (max-width: 49em) {
       .reviews__button a {
         margin-bottom: 3rem; } }
 
@@ -449,7 +462,7 @@ section {
   padding: 2rem;
   font-family: "Montserrat",sans-serif;
   background: rgba(128, 128, 128, 0.1); }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 49em) {
     #google-reviews {
       grid-template-columns: 1fr; } }
 

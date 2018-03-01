@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));
     grid-gap: 6rem;
-    //padding-top: 11.8rem;
 
     @media only screen and (max-width: $bp-smallest) {
         display: flex;
@@ -12,14 +11,29 @@
 
     &--me {
         grid-column: 1 span 1;
-        @media only screen and (max-width: $bp-smallest) {
-            margin-bottom: 2rem;
-            
+    
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: 2rem;        
         }
     }
 
     &--history {
-        grid-column: 2 span 1;    
+        grid-column: 2 span 1;
+
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            
     }
 
     &__img {
@@ -33,6 +47,7 @@
         @media only screen and (max-width: $bp-small) {
             width: 15rem;
             height: 15rem;
+            margin-bottom: 2rem;
         }
     }
 }
