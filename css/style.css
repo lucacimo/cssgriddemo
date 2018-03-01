@@ -65,7 +65,7 @@ section {
       height: 60vh; } }
   @media only screen and (max-width: 28em) {
     .header {
-      height: 47vh; } }
+      height: 50vh; } }
   @media all and (orientation: landscape) {
     .header {
       height: 100vh; } }
