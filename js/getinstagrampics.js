@@ -21,7 +21,7 @@ $.ajax({
     function isPic(value) {
         return value.type == "image";
     }
-    pictures = data.data.filter(isPic).slice(1, 4);
+    pictures = data.data.filter(isPic).slice(0, 3);
     video  = data.data.filter(isVideo);
 
 
