@@ -3,7 +3,7 @@ var data;
 
 $.ajax({
     type: "GET",
-    url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=3015018768.1677ed0.fef522ac3c8f4691afd9062eaddde756",
+    url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=1322378731.1677ed0.9959c71fef8e47f180b3f347c696d319",
     data: data,
     dataType: 'json',
     cache: false,
