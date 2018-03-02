@@ -54,7 +54,7 @@ section {
   @media only screen and (max-width: 53.75em) {
     .header {
       height: 85vh;
-      background: url(../img/pizza.jpg);
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/pizza.jpg);
       background-size: cover;
       margin-bottom: 5rem; } }
   @media only screen and (max-width: 49em) {
@@ -93,13 +93,13 @@ section {
   text-align: center; }
 
 .heading-primary {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   backface-visibility: hidden;
   margin-bottom: 4rem; }
   .heading-primary--main {
     display: block;
     font-size: 7rem;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 1.5rem;
     margin-bottom: 2rem; }
     @media only screen and (max-width: 28em) {
@@ -117,7 +117,7 @@ section {
   margin-right: auto; }
   @media only screen and (max-width: 53.75em) {
     .logo {
-      max-width: 10rem; } }
+      visibility: hidden; } }
 
 .logosticky {
   max-width: 10rem;
