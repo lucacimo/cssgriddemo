@@ -22,13 +22,12 @@ $.ajax({
         return value.type == "image";
     }
     pictures = data.data.filter(isPic).slice(0, 3);
-    video  = data.data.filter(isVideo);
+    video = data.data.filter(isVideo);
 
 
 
     var insta_images = document.getElementsByClassName("insta_image");
     var insta_video = document.getElementsByClassName("insta_video");
-
 
     insta_video[0].firstElementChild.href = video[0].videos.standard_resolution.url
     insta_video[0].children[0].firstElementChild.src = video[0].images.standard_resolution.url;
