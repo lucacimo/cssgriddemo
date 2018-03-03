@@ -1,6 +1,6 @@
 
     $.googlePlaces = function(element, options) {
-
+        console.log("hello again");
         var defaults = {
               placeId: 'ChIJJzBUajbg9DkRl0n8FabbM0A' // placeId provided by google api documentation
             , render: ['reviews']
@@ -21,8 +21,6 @@
           $element.html("<div id='map-plug'></div>"); // create a plug for google to load data into
           initialize_place(function(place){
             plugin.place_data = place;
-            //console.log(plugin.settings.render);
-            // render specified sections
             if(plugin.settings.render.indexOf('reviews') > -1){
               renderReviews(plugin.place_data.reviews);
               if(!!plugin.settings.rotateTime) {
@@ -83,8 +81,12 @@
             
           };
           $element.append(html);
+          
+          if(window.innerWidth <= 860) {
+            addShowMore();
+          }
         }
-        
+      
         var initRotation = function() {
             var $reviewEls = $element.children('.review-item');
             var currentIdx = $reviewEls.length > 0 ? 0 : false;
@@ -126,8 +128,30 @@
           return time;
         }
 
+        var addShowMore = function () {
+          $('.paragraph').each(function(event){ /* select all divs with the item class */
+      
+            var max_length = 300; /* set the max content length before a read more link will be added */
+            
+            if($(this).html().length > max_length){ /* check for content length */
+                
+                var short_content 	= $(this).html().substr(0,max_length); /* split the content in two parts */
+                var long_content	= $(this).html().substr(max_length);
+                
+                $(this).html(short_content+
+                             '<a href="#" class="read_more"><br/>Read More</a>'+
+                             '<span class="more_text" style="display:none;">'+long_content+'</span>'); /* Alter the html to allow the read more functionality */
+                             
+                $(this).find('a.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+        
+                    event.preventDefault(); /* prevent the a from changing the url */
+                    $(this).hide(); /* hide the read more button */
+                    $(this).parents('.paragraph').find('.more_text').show(); /* show the .more_text span */  
+                });  
+              }
+            });
+        }
         plugin.init();
-
     }
 
     $.fn.googlePlaces = function(options) {
@@ -138,34 +162,6 @@
                 $(this).data('googlePlaces', plugin);
             }
         });
-
     }
 
-    $(function(){ /* to make sure the script runs after page load */
-
-      $(function(){ /* to make sure the script runs after page load */
-
-        $('.paragraph').each(function(event){ /* select all divs with the item class */
-        
-          var max_length = 350; /* set the max content length before a read more link will be added */
-          
-          if($(this).html().length > max_length){ /* check for content length */
-            
-            var short_content 	= $(this).html().substr(0,max_length); /* split the content in two parts */
-            var long_content	= $(this).html().substr(max_length);
-            
-            $(this).html(short_content+
-                   '<a href="#" class="read_more"><br/>Read More</a>'+
-                   '<p class="more_text" style="display:none;">'+long_content+'</p>'); /* Alter the html to allow the read more functionality */
-                   
-            $(this).find('a.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
-       
-              event.preventDefault(); /* prevent the a from changing the url */
-              $(this).hide(); /* hide the read more button */
-              $(this).parents('.paragraph').find('.more_text').show(); /* show the .more_text span */       
-            });            
-          }          
-        });
-      });          
-    });
     

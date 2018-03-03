@@ -408,7 +408,7 @@ section {
   text-decoration: none;
   color: #777;
   padding: .1rem;
-  font-weight: 400; }
+  font-weight: 600; }
 
 .services {
   grid-column: center-start / center-end;
