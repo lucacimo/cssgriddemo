@@ -29,11 +29,11 @@ $.ajax({
     var insta_images = document.getElementsByClassName("insta_image");
     var insta_video = document.getElementsByClassName("insta_video");
 
-    insta_video[0].firstElementChild.href = video[0].videos.standard_resolution.url
+    insta_video[0].firstElementChild.href = video[0].link//videos.standard_resolution.url
     insta_video[0].children[0].firstElementChild.src = video[0].images.standard_resolution.url;
 
     for (var i in insta_images) {
         insta_images[i].children[0].firstElementChild.src=pictures[i].images.standard_resolution.url;
-        insta_images[i].firstElementChild.href = pictures[i].images.standard_resolution.url;
+        insta_images[i].firstElementChild.href = pictures[i].link//images.standard_resolution.url;
     }
 }
