@@ -37,9 +37,10 @@
     }
 
     &__img {
-        width: 20rem;
-	    height: 20rem;;
-	    float: left;
+        width: 15rem;
+	    height: 15rem;;
+        float: left;
+        margin-top: 4rem;
         margin-right: 1rem;
         border-radius: 50%; 
         shape-outside: circle();

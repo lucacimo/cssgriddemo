@@ -12,10 +12,18 @@
     font-size: 1.7rem;
     font-weight: 200;
     line-height: 2;
-    color: #777;
+    //color: #777;
+    color: black;
     margin-top: 2rem;
 
     @media only screen and (max-width: $bp-medium-small) {
         font-size: 2rem;
     }
+}
+
+.read_more{
+    text-decoration: none;
+    color: #777;
+    padding: .1rem;
+    font-weight: 400;
 }
