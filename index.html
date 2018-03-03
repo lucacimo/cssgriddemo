@@ -285,51 +285,6 @@
                     <a class="btn btn--white" onClick="window.location.reload()">Back to homepage</a>
         </div>
         <script data-cfasync="false" type="text/javascript" src="js/welcome-msg.js"></script>
-        <script>
-                // When the user scrolls the page, execute myFunction 
-                window.onscroll = function() {myFunction()};
-               
-               // Get the navbar
-               var navbar = document.getElementById("navbar");
-               var about = document.getElementById("about");
-               var logo = document.getElementById("logo");
-               
-               // Get the offset position of the navbar
-               var sticky = spacing.offsetTop;
-               
-               // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-               function myFunction() {
-
-                    var list = document.getElementById("navigation__list");
-                    if (window.pageYOffset >= sticky) {
-                        navbar.classList.add("sticky");
-                        logo.classList.add("logosticky");
-                 } else {
-                   navbar.classList.remove("sticky");
-                   logo.classList.remove("logosticky");
-                 }
-               }            
-           </script>
-           <script>
-                var hamburger = document.getElementById("hamburger");
-                var open = false;
-                hamburger.addEventListener("click", function(){
-
-                    if (open) {
-                        document.getElementById("navigation__list").style.visibility = "hidden";
-                        document.getElementById("social__list").style.visibility="hidden";
-                        document.getElementById("nav-icon").classList.add("fas", "fa-bars");
-                        document.getElementById("nav-icon").classList.remove("far", "fa-window-close");
-                        open = false;
-                    }
-                    else{
-                        document.getElementById("navigation__list").style.visibility = "visible";
-                        document.getElementById("social__list").style.visibility="visible";
-                        document.getElementById("nav-icon").classList.add("far", "fa-window-close");
-                        document.getElementById("nav-icon").classList.remove("fas", "fa-bars");
-                        open = true;
-                    }
-                });         
-           </script>
+        <script src="/js/handle_navigation.js"></script>
     </body>
 </html>

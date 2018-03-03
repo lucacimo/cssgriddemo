@@ -77,12 +77,14 @@ section {
   align-items: center;
   padding: 2rem;
   z-index: 100; }
+  @media only screen and (max-width: 53.75em) {
+    .navigation {
+      align-items: flex-start; } }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #101d2c;
   padding: 2rem; }
 
 .header__text-box {
@@ -110,14 +112,10 @@ section {
     font-weight: 300; }
 
 .logo {
-  max-width: 15rem;
+  max-width: 10rem;
   background: white;
   padding: 1rem;
-  margin-left: 4rem;
-  margin-right: auto; }
-  @media only screen and (max-width: 53.75em) {
-    .logo {
-      visibility: hidden; } }
+  margin-left: 4rem; }
 
 .logosticky {
   max-width: 10rem;
@@ -538,23 +536,17 @@ img {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  font-family: Montserrat,sans-serif;
-  visibility: visible; }
+  font-family: Montserrat,sans-serif; }
   @media only screen and (max-width: 53.75em) {
     .navigation__list {
-      position: absolute;
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       list-style: none;
-      padding: 4rem;
+      align-self: center;
       border-radius: 8px;
-      top: 10rem;
-      right: 0;
-      width: 40%;
-      visibility: hidden;
-      background-color: #101d2c; }
+      display: none; }
       .navigation__list li {
         padding: 1rem;
         margin-bottom: 3rem; } }
@@ -582,16 +574,16 @@ img {
   list-style: none; }
   @media only screen and (max-width: 53.75em) {
     .social__list {
-      position: absolute;
-      width: 40%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      align-self: flex-start;
+      align-items: center;
       list-style: none;
-      padding: 2rem;
       border-radius: 8px;
-      top: 49rem;
-      right: 0;
-      visibility: hidden; } }
+      display: none; }
+      .social__list li {
+        padding: 1rem;
+        margin-bottom: 3rem; } }
   .social__list__item--white {
     text-decoration: none;
     color: white;

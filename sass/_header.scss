@@ -43,13 +43,18 @@
     align-items: center;
     padding: 2rem;
     z-index: 100;
+
+    @media only screen and (max-width: $bp-medium-small) {
+        align-items: flex-start;
+    }
 }
 
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: $color-secondary;
+    //background-color: $color-secondary;
+    
     padding: 2rem;
   }
 
@@ -86,15 +91,10 @@
 }
 
 .logo {
-    max-width: 15rem;
+    max-width: 10rem;
     background: white;
     padding: 1rem;
     margin-left: 4rem;
-    margin-right: auto;
-
-    @media only screen and (max-width: $bp-medium-small) {
-        visibility: hidden;
-    }
 }
 
 .logosticky {
