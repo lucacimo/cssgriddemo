@@ -95,11 +95,10 @@
     background: white;
     padding: 1rem;
     margin-left: 4rem;
-}
 
-.logosticky {
-    max-width: 10rem;
-    padding: .5rem;
+    @media only screen and (max-width: $bp-medium-small) {
+        margin-left: 2rem;
+    }
 }
 
 .bg-video {
