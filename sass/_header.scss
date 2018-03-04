@@ -10,10 +10,10 @@
 
     @media only screen and (max-width: $bp-medium-small) {
         height: 85vh;
-        background-image: //linear-gradient(
-        //to right bottom,
-        //rgba(black, .3),
-        //rgba(black, .3)),
+        background-image: linear-gradient(
+        to right bottom,
+        rgba(black, .2),
+        rgba(black, .2)),
         url(../img/pizza.jpg);
         background-size: cover;
         margin-bottom: 5rem;
@@ -86,7 +86,7 @@
 
     &--sub {
         font-size: 2.5rem;
-        font-weight: 300;
+        font-weight: 400;
     }
 }
 
