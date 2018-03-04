@@ -401,7 +401,11 @@ section {
     .paragraph {
       font-size: 2rem; } }
 
-.read_more {
+.morecontent span {
+  display: none; }
+
+.morelink {
+  display: block;
   text-decoration: none;
   color: #777;
   padding: .1rem;

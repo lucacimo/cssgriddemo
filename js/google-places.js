@@ -129,26 +129,39 @@
         }
 
         var addShowMore = function () {
-          $('.paragraph').each(function(event){ /* select all divs with the item class */
-      
-            var max_length = 300; /* set the max content length before a read more link will be added */
+            // Configure/customize these variables.
+            var showChar = 300;  // How many characters are shown by default
+            var ellipsestext = "...";
+            var moretext = "Show more";
+            var lesstext = "Show less";
             
-            if($(this).html().length > max_length){ /* check for content length */
-                
-                var short_content 	= $(this).html().substr(0,max_length); /* split the content in two parts */
-                var long_content	= $(this).html().substr(max_length);
-                
-                $(this).html(short_content+
-                             '<a href="#" class="read_more"><br/>Read More</a>'+
-                             '<span class="more_text" style="display:none;">'+long_content+'</span>'); /* Alter the html to allow the read more functionality */
-                             
-                $(this).find('a.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
         
-                    event.preventDefault(); /* prevent the a from changing the url */
-                    $(this).hide(); /* hide the read more button */
-                    $(this).parents('.paragraph').find('.more_text').show(); /* show the .more_text span */  
-                });  
-              }
+            $('.paragraph').each(function() {
+                var content = $(this).html();
+         
+                if(content.length > showChar) {
+         
+                    var c = content.substr(0, showChar);
+                    var h = content.substr(showChar, content.length - showChar);
+         
+                    var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+         
+                    $(this).html(html);
+                }
+         
+            });
+         
+            $(".morelink").click(function(){
+                if($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
             });
         }
         plugin.init();
