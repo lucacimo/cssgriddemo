@@ -33,18 +33,38 @@
     hamburger.addEventListener("click", function(){
 
         if (open) {
-            document.getElementById("navigation__list").style.transform="translate(-300px,0)";
-            document.getElementById("social__list").style.transform="translate(-300px,0)";
+            console.log("you should close the nav");
+            //document.getElementById("navigation__list").classList.remove("navigation__list__open");
+            //document.getElementById("navigation__list").style.transform = "translate(-300px, 0);";
+            //document.getElementById("navigation__list").style.left = "0";
+            //document.getElementById("social__list").style.display="none";
+            //document.getElementById("navbar").style.borderBottom = "none";
             document.getElementById("nav-icon").classList.add("fas", "fa-bars");
             document.getElementById("nav-icon").classList.remove("far", "fa-window-close");
             open = false;
         }
         
         else{
-            document.getElementById("navigation__list").style.transform="translate(0,0)";
-            document.getElementById("social__list").style.transform="translate(0,0)";
+            console.log("you should open the nav");
+            l = document.getElementById("navigation__list");//.classList.add("navigation__list__open");
+            console.log(l);
+            //document.getElementById("navigation__list").style.left = "0";
+            //document.getElementById("social__list").style.display = "flex";
+            //document.getElementById("navbar").style.backgroundColor="#101d2c";
+            //document.getElementById("navbar").style.borderBottom = " 1px solid white";
             document.getElementById("nav-icon").classList.add("far", "fa-window-close");
             document.getElementById("nav-icon").classList.remove("fas", "fa-bars");
             open = true;
         }
+
+        if (!open && pageYOffset <= sticky) {
+            //document.getElementById("navbar").style.backgroundColor = "transparent";
+        }
+
+        if (open && pageYOffset <= sticky) {
+            //document.getElementById("navbar").style.backgroundColor = "#101d2c";
+        }
+
+
+
     });        

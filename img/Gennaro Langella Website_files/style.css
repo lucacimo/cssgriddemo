@@ -521,16 +521,18 @@ img {
       align-items: center;
       list-style: none;
       align-self: center;
-      top: 9.1rem;
+      top: 9.2rem;
       left: 0;
-      width: 20rem;
-      background-color: #101d2c;
-      border-bottom-right-radius: 8px;
-      transform: translate(-300px, 0);
+      width: 40%;
+      background-color: red;
+      transform: translate(-100px, 0);
       transition: transform 0.3s ease; }
       .navigation__list li {
         padding: 1rem;
         margin-bottom: 3rem; } }
+  .navigation__list .navigation__list__open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
   .navigation__list__item--white {
     font-size: 2rem;
     text-decoration: none;
@@ -561,12 +563,15 @@ img {
       list-style: none;
       border-radius: 8px;
       display: none;
-      transform: translate(-300px, 0);
-      transition: transform 0.3s ease; } }
+      position: absolute;
+      top: 0rem;
+      left: 0rem; }
+      .social__list li {
+        padding: 1rem;
+        margin-bottom: 3rem; } }
   .social__list__item--white {
     text-decoration: none;
     color: white;
-    margin-right: 1rem;
     padding: 1rem; }
   .social__list__item--white:hover {
     opacity: 0.7; }

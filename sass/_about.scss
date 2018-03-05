@@ -1,18 +1,17 @@
 .about {
     grid-column: center-start / center-end;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));
+    grid-template-columns:  1fr 1fr;
     grid-gap: 6rem;
 
-    @media only screen and (max-width: $bp-smallest) {
-        display: flex;
-        flex-direction: column;
+    @media only screen and (max-width: $bp-medium-small) {
+        grid-template-columns: 1fr;
     }
 
+
     &--me {
-        grid-column: 1 span 1;
     
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-medium-small) {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -25,9 +24,8 @@
     }
 
     &--history {
-        grid-column: 2 span 1;
 
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-medium-small) {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -37,8 +35,8 @@
     }
 
     &__img {
-        width: 15rem;
-	    height: 15rem;;
+        max-width: 15rem;
+	    max-height: 15rem;;
         float: left;
         margin-top: 4rem;
         margin-right: 1rem;
@@ -46,8 +44,6 @@
         shape-outside: circle();
         
         @media only screen and (max-width: $bp-small) {
-            width: 15rem;
-            height: 15rem;
             margin-bottom: 2rem;
         }
     }

@@ -6,14 +6,20 @@
     font-family: Montserrat,sans-serif;
 
     @media only screen and (max-width: $bp-medium-small) {
-        display:none;
+        position: absolute;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         list-style: none;
         align-self: center;
-        border-radius: 8px;
-        display: none;    
+      
+        top: 9.1rem;
+        left: 0;
+        width: 20rem;
+        background-color: #101d2c;
+        border-bottom-right-radius: 8px;
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;   
         
         & li {
             padding: 1rem;
@@ -56,22 +62,22 @@
 
     @media only screen and (max-width: $bp-medium-small) {
         display: flex;
-        flex-direction: column;
         align-self: flex-start;
         align-items: center;
         list-style: none;
         border-radius: 8px;
+        //position: absolute;
         display: none;
-    
-        & li {
-            padding: 1rem;
-            margin-bottom: 3rem;
-        }
+        //top: 47rem;
+        //left: 8rem;
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;   
     }
 
     &__item--white {
         text-decoration: none;
         color: white;
+        margin-right: 1rem;
         padding: 1rem;
     }
 

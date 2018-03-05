@@ -11,7 +11,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        //background: rgba(gray, 0.1);
         padding: 2rem;
 
         & a {
@@ -23,17 +22,14 @@
 }
 
 #google-reviews {
-    display: flex;
-
     grid-column: full-start / center-end;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr; 
     grid-gap: 4rem;
     padding: 2rem;
     font-family: "Montserrat",sans-serif;
-    //background: rgba(gray, 0.1);
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-medium-small) {
         grid-template-columns: 1fr;
     }
 }
