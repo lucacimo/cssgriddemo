@@ -109,6 +109,13 @@
     opacity: .9;
     overflow: hidden;
 
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(black, .2),
+        rgba(black, .2)),
+        url(../img/pizza.jpg);
+        background-size: cover;
+
     @media only screen and (max-width: $bp-medium-small) {
         visibility: hidden;
     }

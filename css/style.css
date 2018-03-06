@@ -125,7 +125,9 @@ section {
   width: 100%;
   z-index: -1;
   opacity: .9;
-  overflow: hidden; }
+  overflow: hidden;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/pizza.jpg);
+  background-size: cover; }
   @media only screen and (max-width: 53.75em) {
     .bg-video {
       visibility: hidden; } }
