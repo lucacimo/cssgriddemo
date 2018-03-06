@@ -22,11 +22,15 @@
              logo.classList.add("logosticky");
              document.getElementById("navbar").style.backgroundColor="#101d2c";
       } 
-      else if(window.pageYOffset <= sticky && !open){
+      else if(window.pageYOffset <= sticky){
         navbar.classList.remove("sticky");
         logo.classList.remove("logosticky");
         document.getElementById("navbar").style.backgroundColor="transparent";
                            
+      }
+
+      if (window.pageYOffset <= sticky && open) {
+        document.getElementById("navbar").style.backgroundColor="transparent"; 
       }
     }
     
