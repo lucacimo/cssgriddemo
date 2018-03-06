@@ -16,7 +16,7 @@ html {
       font-size: 50%; } }
   @media only screen and (max-width: 49em) {
     html {
-      font-size: 50%; } }
+      font-size: 45%; } }
   @media only screen and (max-width: 37.5em) {
     html {
       font-size: 40%; } }
@@ -523,14 +523,15 @@ img {
       align-self: center;
       top: 9.1rem;
       left: 0;
-      width: 20rem;
+      width: 30rem;
       background-color: #101d2c;
+      border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
-      transform: translate(-300px, 0);
+      -webkit-transform: translate(-300px, 0);
+      transform: translate(0, -300px);
       transition: transform 0.3s ease; }
       .navigation__list li {
-        padding: 1rem;
-        margin-bottom: 3rem; } }
+        padding: 3rem; } }
   .navigation__list__item--white {
     font-size: 2rem;
     text-decoration: none;
@@ -553,16 +554,6 @@ img {
   justify-content: space-between;
   align-items: center;
   list-style: none; }
-  @media only screen and (max-width: 53.75em) {
-    .social__list {
-      display: flex;
-      align-self: flex-start;
-      align-items: center;
-      list-style: none;
-      border-radius: 8px;
-      display: none;
-      transform: translate(-300px, 0);
-      transition: transform 0.3s ease; } }
   .social__list__item--white {
     text-decoration: none;
     color: white;

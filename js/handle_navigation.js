@@ -34,7 +34,6 @@
 
         if (open) {
             document.getElementById("navigation__list").style.transform="translate(-300px,0)";
-            document.getElementById("social__list").style.transform="translate(-300px,0)";
             document.getElementById("nav-icon").classList.add("fas", "fa-bars");
             document.getElementById("nav-icon").classList.remove("far", "fa-window-close");
             open = false;
@@ -42,7 +41,6 @@
         
         else{
             document.getElementById("navigation__list").style.transform="translate(0,0)";
-            document.getElementById("social__list").style.transform="translate(0,0)";
             document.getElementById("nav-icon").classList.add("far", "fa-window-close");
             document.getElementById("nav-icon").classList.remove("fas", "fa-bars");
             open = true;
