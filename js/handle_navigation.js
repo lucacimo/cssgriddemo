@@ -3,8 +3,10 @@
                
     // Get the navbar
     var navbar = document.getElementById("navbar");
+    var navlist = document.getElementById("navigation__list");
     var about = document.getElementById("about");
     var logo = document.getElementById("logo");
+    var navicon = document.getElementById("nav-icon");
     
     // Get the offset position of the navbar
     var sticky = spacing.offsetTop;
@@ -20,33 +22,33 @@
          if (window.pageYOffset >= sticky) {
              navbar.classList.add("sticky");
              logo.classList.add("logosticky");
-             document.getElementById("navbar").style.backgroundColor="#101d2c";
+             navbar.style.backgroundColor="#101d2c";
       } 
       else if(window.pageYOffset <= sticky){
         navbar.classList.remove("sticky");
         logo.classList.remove("logosticky");
-        document.getElementById("navbar").style.backgroundColor="transparent";
+        navbar.style.backgroundColor="transparent";
                            
       }
 
       if (window.pageYOffset <= sticky && open) {
-        document.getElementById("navbar").style.backgroundColor="transparent"; 
+        navbar.style.backgroundColor="transparent"; 
       }
     }
     
     hamburger.addEventListener("click", function(){
 
         if (open) {
-            document.getElementById("navigation__list").style.transform="translate(-300px,0)";
-            document.getElementById("nav-icon").classList.add("fas", "fa-bars");
-            document.getElementById("nav-icon").classList.remove("far", "fa-window-close");
+            navlist.style.transform="translate(-300px,0)";
+            navicon.classList.add("fas", "fa-bars");
+            navlist.classList.remove("far", "fa-window-close");
             open = false;
         }
         
         else{
-            document.getElementById("navigation__list").style.transform="translate(0,0)";
-            document.getElementById("nav-icon").classList.add("far", "fa-window-close");
-            document.getElementById("nav-icon").classList.remove("fas", "fa-bars");
+            navlist.style.transform="translate(0,0)";
+            navicon.classList.add("far", "fa-window-close");
+            navicon.classList.remove("fas", "fa-bars");
             open = true;
         }
     });        
