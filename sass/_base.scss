@@ -24,12 +24,12 @@ $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
 $default-font-size: 1.6rem;
-$bp-large: 68.75em;
-$bp-medium: 61.25em; 
-$bp-medium-small: 53.75em;
-$bp-small: 49em;
-$bp-smallest: 37.5em;
-$bp-super-small: 28em;
+$bp-large: 68.75em; //1100 px
+$bp-medium: 61.25em; //980 px
+$bp-medium-small: 53.75em; //860 px
+$bp-small: 49em; //784 px
+$bp-smallest: 37.5em; //600 px
+$bp-super-small: 28em; //448 px
 
 *,
 *:before,
