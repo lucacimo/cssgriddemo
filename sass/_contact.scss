@@ -11,6 +11,10 @@
 
 .contact {
     text-align: center;
+
+    & h5 {
+        color:white;
+    }
 }
 
 .form__input {
@@ -41,6 +45,7 @@
         padding: 2rem;
         margin-bottom: 2rem;
         list-style: none;
+        text-align: center;
 
         @media only screen and (max-width: $bp-small) {
             margin-bottom: 1rem;
