@@ -47,7 +47,8 @@ section {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   margin-bottom: 11.8rem;
-  height: 100vh; }
+  height: 100vh;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 53.75em) {
     .header {
       height: 85vh;
@@ -185,7 +186,8 @@ section {
   grid-gap: 6rem;
   padding: 3rem;
   margin-top: 7rem;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2); }
 
 .contact {
   text-align: center; }
@@ -354,9 +356,10 @@ section {
     max-height: 15rem;
     float: left;
     margin-top: 4rem;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     border-radius: 50%;
-    shape-outside: circle(); }
+    shape-outside: circle();
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 49em) {
       .about__img {
         margin-bottom: 2rem; } }
@@ -416,7 +419,8 @@ section {
     font-weight: 400;
     transform: translateY(-50%);
     border-radius: 10px;
-    margin-bottom: -2.5rem; }
+    margin-bottom: -2.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 #map-plug {
   display: none; }

@@ -39,9 +39,10 @@
 	    max-height: 15rem;;
         float: left;
         margin-top: 4rem;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
         border-radius: 50%; 
         shape-outside: circle();
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
         
         @media only screen and (max-width: $bp-small) {
             margin-bottom: 2rem;
