@@ -2,7 +2,7 @@
     grid-column: center-start / center-end;
     display: grid;
     grid-template-columns:  1fr 1fr;
-    grid-gap: 6rem;
+    grid-gap: 4rem;
 
     @media only screen and (max-width: $bp-medium-small) {
         grid-template-columns: 1fr;
