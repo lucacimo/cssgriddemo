@@ -1,13 +1,13 @@
 
     $.googlePlaces = function(element, options) {
         var defaults = {
-              placeId: 'ChIJJzBUajbg9DkRl0n8FabbM0A' // placeId provided by google api documentation
-            , render: ['reviews']
+              placeId: 'ChIJTQXKg-CoOxMRp73OPlsGOzA' // placeId provided by google api documentation
+              , render: ['reviews']
             , min_rating: 0
             , max_rows: 0
             , rotateTime: false
         };
-
+    
         var plugin = this;
 
         plugin.settings = {}
