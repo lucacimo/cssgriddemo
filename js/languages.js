@@ -1,3 +1,40 @@
+var addShowMore = function () {
+  // Configure/customize these variables.
+  var showChar = 300;  // How many characters are shown by default
+  var ellipsestext = "...";
+  var moretext = "Show more";
+  var lesstext = "Show less";
+  
+
+  $('.paragraph').each(function() {
+      var content = $(this).html();
+
+      if(content.length > showChar) {
+
+          var c = content.substr(0, showChar);
+          var h = content.substr(showChar, content.length - showChar);
+
+          var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+          $(this).html(html);
+      }
+
+  });
+
+  $(".morelink").click(function(){
+      if($(this).hasClass("less")) {
+          $(this).removeClass("less");
+          $(this).html(moretext);
+      } else {
+          $(this).addClass("less");
+          $(this).html(lesstext);
+      }
+      $(this).parent().prev().toggle();
+      $(this).prev().toggle();
+      return false;
+  });
+}
+
 var consulting_txt_en = "Before getting your pizzeria started is absolutely necessary to know all the aspects concerning the business, choosing all the right tools, how to manage the relationships with dealers in order to correctly choose high quality products, how to make a great menu and finally choosing the right combination of ingredients to make your personal concept become true. With our skills and our long international experience in the domain we will be able to help you to improve your existing business.";
 var consulting_txt_it = "Prima di aprire una pizzeria è necessario conoscere i tanti aspetti di questa professione, dalla scelta delle giuste attrezzature ad un corretto rapporto con fornitori nella scelta delle materie prime, dalla creazione di un nuovo menù alla giusta combinazione degli ingredienti a seconda del concept si andrà a realizzare. \
                          Grazie all'esperienza di oltre 20 anni di attività maturata nel settore, a livello nazionale e internazionale, possiamo aiutarti a migliorare  un'attività già esistente."
@@ -109,6 +146,7 @@ i18next.init({
     document.getElementById('gallery-foot').innerHTML = i18next.t('gallery');
     document.getElementById('thanks-msg').innerHTML = i18next.t('thanks-msg');
     document.getElementById('contact-msg').innerHTML = i18next.t('contact-msg');
+    addShowMore();
   }
 
   function changeLng(lng) {
@@ -118,3 +156,5 @@ i18next.init({
   i18next.on('languageChanged', () => {
     updateContent();
   });
+
+  
