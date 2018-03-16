@@ -116,7 +116,7 @@ var resources = {
 
 
 i18next.init({
-    lng: 'it',
+    lng: 'en',
     debug: true,
     resources: resources
   }, function(err, t) {
