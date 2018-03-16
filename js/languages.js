@@ -1,10 +1,20 @@
-var addShowMore = function () {
+var addShowMore = function (lng) {
   // Configure/customize these variables.
   var showChar = 300;  // How many characters are shown by default
   var ellipsestext = "...";
-  var moretext = "Show more";
-  var lesstext = "Show less";
-  
+
+  var moretext = "";
+  var lesstext = "";
+
+  if (lng == 'en') {
+    moretext = "Show more";
+    lesstext = "Show less";
+  }
+
+  if (lng == 'it') {
+    moretext = "Mostra di più";
+    lesstext = "Mostra di meno";
+  }
 
   $('.paragraph').each(function() {
       var content = $(this).html();
@@ -36,16 +46,13 @@ var addShowMore = function () {
 }
 
 var consulting_txt_en = "Before getting your pizzeria started is absolutely necessary to know all the aspects concerning the business, choosing all the right tools, how to manage the relationships with dealers in order to correctly choose high quality products, how to make a great menu and finally choosing the right combination of ingredients to make your personal concept become true. With our skills and our long international experience in the domain we will be able to help you to improve your existing business.";
-var consulting_txt_it = "Prima di aprire una pizzeria è necessario conoscere i tanti aspetti di questa professione, dalla scelta delle giuste attrezzature ad un corretto rapporto con fornitori nella scelta delle materie prime, dalla creazione di un nuovo menù alla giusta combinazione degli ingredienti a seconda del concept si andrà a realizzare. \
-                         Grazie all'esperienza di oltre 20 anni di attività maturata nel settore, a livello nazionale e internazionale, possiamo aiutarti a migliorare  un'attività già esistente."
+var consulting_txt_it = "Prima di aprire una pizzeria è necessario conoscere i tanti aspetti di questa professione, dalla scelta delle giuste attrezzature ad un corretto rapporto con fornitori nella scelta delle materie prime, dalla creazione di un nuovo menù alla giusta combinazione degli ingredienti a seconda del concept che si andrà a realizzare. Grazie all'esperienza di oltre 20 anni di attività maturata nel settore, a livello nazionale e internazionale, possiamo aiutarti a migliorare  un'attività già esistente."
 
 var training_txt_en = "The pizza maker and his formation play an important role as much as the customer service. The right balance between all this aspects are the key to make your business really successful. Our goal during the training is to provide you with all the knowledge about the dough preparation, the leavening process , the final baking and how to find the right balance of the ingredients in the recipes. We will provide you also with all the secrets to build the perfect team to get your business up and running in no time.";
-var training_txt_it = "Il ruolo del pizzaiolo e la sua formazione sono un elemento fondamentale per il successo della stessa così come il servizio gioca un ruolo predominante. Un giusto equilibrio è la chiave del successo. \
-                       Il nostro obiettivo nella fase training non sarà solo l'istruzione del pizzaiolo nella conoscenza degli impasti, lievitazioni, cottura e equilibrio degli ingredienti nelle ricette ma la creazione di una vera squadra di lavoro che sappia lavorare in team."
+var training_txt_it = "Il ruolo del pizzaiolo e la sua formazione sono un elemento fondamentale per il successo della vostra attività, così come il servizio gioca un ruolo predominante. Un giusto equilibrio tra questi fattori è la chiave del successo. Il nostro obiettivo nella fase training non sarà solo la formazione del pizzaiolo nella conoscenza degli impasti, lievitazioni e cottura della pizza, ma anche nel trovare il giusto equilibrio degli ingredienti nelle ricette e la creazione di una vera e propria squadra di lavoro."
 
-var startup_txt_en = "Getting your business started is considered to be a very difficult task but with the right training and consulting can become a very easy task. Our goal is to make that happen because the customer satisfaction plays an important role to make your business successful and a happy customer who spreads the word is the best form of advertising for your pizzeria. We will provide you with all the knowledge you need to make a proper marketing campaign and to have the best formation for your staff."
-var startup_txt_it = "Iniziare una nuova attività può sembrare un compito arduo ma è strettamente collegato al risultato di un buon lavoro di training e consulting.I clienti che entrano in un locale cercano un'esperienza e tu devi essere in grado di dargliela per farli ritornare e far parlare di te ..Diceva mio padre il passaparola è quello che conta e la miglior pubblicità te la fa il cliente. Le cose sono un po’ cambiate dagli anni 80 ad oggi ma sicuramente senza la tradizione non si costruisce l'innovazione. \
-                      Ti daremo gli strumenti per strutturare una buona campagna di marketing, realizzare un'adeguata formazione del personale e giungere al successo."
+var startup_txt_en = "Getting your business started is considered to be a very difficult task but with the right training and consulting can become a very easy task. Our goal is to make that happen providing you with all the knowledge you need to make a proper marketing campaign and to have the best formation for your staff. The customer satisfaction plays an important role to make your business successful and a happy customer who spreads the word is the best form of advertising for your pizzeria."
+var startup_txt_it = "Iniziare una nuova attività può sembrare un compito arduo ma con un buon lavoro di formazione e consulenza può diventare un compito facilmente realizzabile. La nostra missione è quella di rendere questa fase il più agevole possibile offrendonti gli strumenti per strutturare una buona campagna di marketing e realizzare un'adeguata formazione del personale. La soddisfazione del cliente gioca un ruolo fondamentale e il passaparola è la migliore forma di pubblicità possibile." 
 
 var resources = {
     en: {
@@ -109,7 +116,7 @@ var resources = {
 
 
 i18next.init({
-    lng: 'en',
+    lng: 'it',
     debug: true,
     resources: resources
   }, function(err, t) {
@@ -146,7 +153,10 @@ i18next.init({
     document.getElementById('gallery-foot').innerHTML = i18next.t('gallery');
     document.getElementById('thanks-msg').innerHTML = i18next.t('thanks-msg');
     document.getElementById('contact-msg').innerHTML = i18next.t('contact-msg');
-    addShowMore();
+
+    if(window.innerWidth <= 860) { //limit the number of review on mobile
+      addShowMore(i18next.language);
+    }
   }
 
   function changeLng(lng) {

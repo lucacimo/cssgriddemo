@@ -1,6 +1,5 @@
 
     $.googlePlaces = function(element, options) {
-        console.log("hello again");
         var defaults = {
               placeId: 'ChIJJzBUajbg9DkRl0n8FabbM0A' // placeId provided by google api documentation
             , render: ['reviews']
@@ -82,8 +81,7 @@
           };
           $element.append(html);
           
-          if(window.innerWidth <= 860) {
-            addShowMore();
+          if(window.innerWidth <= 860) { //add the read more button if on mobile
           }
         }
       
@@ -127,43 +125,7 @@
           var time = months[a.getMonth()] + ' ' + a.getDate() + ', ' + a.getFullYear();
           return time;
         }
-
-        var addShowMore = function () {
-            // Configure/customize these variables.
-            var showChar = 300;  // How many characters are shown by default
-            var ellipsestext = "...";
-            var moretext = "Show more";
-            var lesstext = "Show less";
-            
         
-            $('.paragraph').each(function() {
-                var content = $(this).html();
-         
-                if(content.length > showChar) {
-         
-                    var c = content.substr(0, showChar);
-                    var h = content.substr(showChar, content.length - showChar);
-         
-                    var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-         
-                    $(this).html(html);
-                }
-         
-            });
-         
-            $(".morelink").click(function(){
-                if($(this).hasClass("less")) {
-                    $(this).removeClass("less");
-                    $(this).html(moretext);
-                } else {
-                    $(this).addClass("less");
-                    $(this).html(lesstext);
-                }
-                $(this).parent().prev().toggle();
-                $(this).prev().toggle();
-                return false;
-            });
-        }
         plugin.init();
     }
 
