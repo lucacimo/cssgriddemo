@@ -136,17 +136,3 @@
         });
     }
 
-    i18next.on('languageChanged', () => {
-      $.fn.googlePlaces = function(options) {
-
-        return this.each(function() {
-            if (undefined == $(this).data('googlePlaces')) {
-                var plugin = new $.googlePlaces(this, options);
-                $(this).data('googlePlaces', plugin);
-            }
-        });
-      }
-    });
-  
-
-    
