@@ -16,7 +16,7 @@ var addShowMore = function (lng) {
     lesstext = "Mostra di meno";
   }
 
-  $('.paragraph').each(function() {
+  $('.section-paragraph').each(function() {
       var content = $(this).html();
 
       if(content.length > showChar) {
@@ -154,7 +154,7 @@ i18next.init({
     document.getElementById('thanks-msg').innerHTML = i18next.t('thanks-msg');
     document.getElementById('contact-msg').innerHTML = i18next.t('contact-msg');
 
-    if(window.innerWidth <= 860) { //limit the number of review on mobile
+    if(window.innerWidth <= 860) { 
       addShowMore(i18next.language);
     }
   }

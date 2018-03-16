@@ -80,9 +80,6 @@
             
           };
           $element.append(html);
-          
-          if(window.innerWidth <= 860) { //add the read more button if on mobile
-          }
         }
       
         var initRotation = function() {
@@ -125,7 +122,7 @@
           var time = months[a.getMonth()] + ' ' + a.getDate() + ', ' + a.getFullYear();
           return time;
         }
-        
+
         plugin.init();
     }
 
@@ -138,5 +135,18 @@
             }
         });
     }
+
+    i18next.on('languageChanged', () => {
+      $.fn.googlePlaces = function(options) {
+
+        return this.each(function() {
+            if (undefined == $(this).data('googlePlaces')) {
+                var plugin = new $.googlePlaces(this, options);
+                $(this).data('googlePlaces', plugin);
+            }
+        });
+      }
+    });
+  
 
     
