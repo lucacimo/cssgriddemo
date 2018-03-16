@@ -89,17 +89,17 @@
     }
 }
 
-.logo {
-    max-width: 10rem;
-    background: white;
-    padding: 1rem;
-    margin-left: 4rem;
-    visibility: hidden;
+// .logo {
+//     max-width: 10rem;
+//     background: white;
+//     padding: 1rem;
+//     margin-left: 4rem;
+//     visibility: hidden;
 
-    @media only screen and (max-width: $bp-medium-small) {
-        margin-left: 2rem;
-    }
-}
+//     @media only screen and (max-width: $bp-medium-small) {
+//         margin-left: 2rem;
+//     }
+// }
 
 .bg-video {
     position: absolute;

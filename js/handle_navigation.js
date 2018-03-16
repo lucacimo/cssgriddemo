@@ -21,12 +21,10 @@
          var list = document.getElementById("navigation__list");
          if (window.pageYOffset >= sticky) {
              navbar.classList.add("sticky");
-             logo.classList.add("logosticky");
              navbar.style.backgroundColor="#101d2c";
       } 
       else if(window.pageYOffset <= sticky){
         navbar.classList.remove("sticky");
-        logo.classList.remove("logosticky");
         navbar.style.backgroundColor="transparent";
                            
       }

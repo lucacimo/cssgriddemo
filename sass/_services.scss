@@ -34,4 +34,9 @@
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
     }
 
+    &__diploma {
+        grid-column: 2 / 3;
+        grid-row: 2 / 2;
+    }
+
 }

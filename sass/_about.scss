@@ -49,3 +49,13 @@
         }
     }
 }
+
+.diploma {
+    grid-column: center-start / center-end;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__img {
+        max-width: 40rem;
+    }
+}

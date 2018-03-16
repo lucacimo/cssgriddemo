@@ -109,16 +109,6 @@ section {
     font-size: 2.5rem;
     font-weight: 400; }
 
-.logo {
-  max-width: 10rem;
-  background: white;
-  padding: 1rem;
-  margin-left: 4rem;
-  visibility: hidden; }
-  @media only screen and (max-width: 53.75em) {
-    .logo {
-      margin-left: 2rem; } }
-
 .bg-video {
   position: absolute;
   top: 0;
@@ -363,6 +353,13 @@ section {
       .about__img {
         margin-bottom: 2rem; } }
 
+.diploma {
+  grid-column: center-start / center-end;
+  margin-left: auto;
+  margin-right: auto; }
+  .diploma__img {
+    max-width: 40rem; }
+
 .heading--tertiary {
   font-family: "Montserrat",sans-serif;
   font-size: 3rem;
@@ -420,6 +417,9 @@ section {
     border-radius: 10px;
     margin-bottom: -2.5rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .services__diploma {
+    grid-column: 2 / 3;
+    grid-row: 2 / 2; }
 
 #map-plug {
   display: none; }
@@ -579,3 +579,17 @@ img {
   @media only screen and (max-width: 53.75em) {
     .hamburger__icon {
       display: inline-block; } }
+
+.languages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-family: Montserrat,sans-serif; }
+  .languages li {
+    cursor: pointer;
+    font-size: 1.7rem;
+    margin-left: 2rem; }
+  .languages a {
+    color: white;
+    text-decoration: none; }
