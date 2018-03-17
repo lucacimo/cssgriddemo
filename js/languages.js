@@ -48,7 +48,7 @@ var addShowMore = function (lng) {
 var consulting_txt_en = "Before getting your pizzeria started is absolutely necessary to know all the aspects concerning the business, choosing all the right tools, how to manage the relationships with dealers in order to correctly choose high quality products, how to make a great menu and finally choosing the right combination of ingredients to make your personal concept become true. With our skills and our long international experience in the domain we will be able to help you to improve your existing business.";
 var consulting_txt_it = "Prima di aprire una pizzeria è necessario conoscere i tanti aspetti di questa professione, dalla scelta delle giuste attrezzature ad un corretto rapporto con fornitori nella scelta delle materie prime, dalla creazione di un nuovo menù alla giusta combinazione degli ingredienti a seconda del concept che si andrà a realizzare. Grazie all'esperienza di oltre 20 anni di attività maturata nel settore, a livello nazionale e internazionale, possiamo aiutarti a migliorare  un'attività già esistente."
 
-var training_txt_en = "The pizza maker and his formation play an important role as much as the customer service. The right balance between all this aspects are the key to make your business really successful. Our goal during the training is to provide you with all the knowledge about the dough preparation, the leavening process , the final baking and how to find the right balance of the ingredients in the recipes. We will provide you also with all the secrets to build the perfect team to get your business up and running in no time.";
+var training_txt_en = "The pizza maker and his formation play an important role as much as the customer service. The right balance between all these aspects are the key to make your business really successful. Our goal during the training is to provide you with all the knowledge about the dough preparation, the leavening process , the final baking and how to find the right balance of the ingredients in the recipes. We will provide you also with all the secrets to build the perfect team to get your business up and running in no time.";
 var training_txt_it = "Il ruolo del pizzaiolo e la sua formazione sono un elemento fondamentale per il successo della vostra attività, così come il servizio gioca un ruolo predominante. Un giusto equilibrio tra questi fattori è la chiave del successo. Il nostro obiettivo nella fase training non sarà solo la formazione del pizzaiolo nella conoscenza degli impasti, lievitazioni e cottura della pizza, ma anche nel trovare il giusto equilibrio degli ingredienti nelle ricette e la creazione di una vera e propria squadra di lavoro."
 
 var startup_txt_en = "Getting your business started is considered to be a very difficult task but with the right training and consulting can become a very easy task. Our goal is to make that happen providing you with all the knowledge you need to make a proper marketing campaign and to have the best formation for your staff. The customer satisfaction plays an important role to make your business successful and a happy customer who spreads the word is the best form of advertising for your pizzeria."
@@ -114,9 +114,10 @@ var resources = {
     }
   }
 
-
-i18next.init({
-    lng: 'en',
+  i18next
+  .use(i18nextBrowserLanguageDetector)
+  .init({
+    fallbackLng: 'en',
     debug: true,
     resources: resources
   }, function(err, t) {
