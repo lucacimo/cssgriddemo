@@ -1,5 +1,23 @@
 .about {
     grid-column: center-start / center-end;
+
+    & blockquote {
+        position: relative;
+        margin-top: 8rem;
+        font-size: 2rem;
+    }
+
+    & blockquote:before {
+        content: "\201C";
+        font-size: 500%;
+        display: block;
+        position: absolute;
+        top: -6rem;
+        left: -1.6rem;
+    }
+}
+
+.about-container {
     display: grid;
     grid-template-columns:  1fr 1fr;
     grid-gap: 4rem;

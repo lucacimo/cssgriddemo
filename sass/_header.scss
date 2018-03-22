@@ -4,7 +4,7 @@
     grid-column: full-start / full-end;
     background: rgba(black, .3);
     position: relative;
-    margin-bottom: 11.8rem;
+    margin-bottom: 8rem;
     height: 100vh;
     box-shadow: 0 2rem 3rem rgba($color-black,.2);
 
@@ -33,7 +33,7 @@
     }
 
     @media all and (orientation: landscape) {
-        height: auto;
+        //height: auto;
     }
 }
 

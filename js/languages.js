@@ -54,6 +54,16 @@ var training_txt_it = "Il ruolo del pizzaiolo e la sua formazione sono un elemen
 var startup_txt_en = "Getting your business started is considered to be a very difficult task but with the right training and consulting can become a very easy task. Our goal is to make that happen providing you with all the knowledge you need to make a proper marketing campaign and to have the best formation for your staff. The customer satisfaction plays an important role to make your business successful and a happy customer who spreads the word is the best form of advertising for your pizzeria."
 var startup_txt_it = "Iniziare una nuova attività può sembrare un compito arduo ma con un buon lavoro di formazione e consulenza può diventare un compito facilmente realizzabile. La nostra missione è quella di rendere questa fase il più agevole possibile offrendonti gli strumenti per strutturare una buona campagna di marketing e realizzare un'adeguata formazione del personale. La soddisfazione del cliente gioca un ruolo fondamentale e il passaparola è la migliore forma di pubblicità possibile." 
 
+var about_me_txt_it = "Gennaro Langella nasce a San Giorgio a Cremano (Napoli) nel 1981 da una famiglia di quattro generazioni di pizzaioli napoletani. Inizia a fare i primi passi nel mondo della pizza all’età di tredici anni nella storica pizzeria di famiglia che vanta una lunga tradizione nel mondo della pizza verace napoletana grazie anche alla collaborazione con le varie associazioni. All’età di ventiquattro anni inizia la sua carriera anche in ambito internazionale e lavora in quattro diversi continenti diffondendo l’arte della pizza verace napoletana nel mondo. Ultimo di quattro fratelli grazie a suo padre maestro sul lavoro e nella vita, ha avuto la fortuna di collaborare con i più grandi professionisti del settore arricchendo il suo bagaglio professionale, anche al di là  della scuola di famiglia, trasformandolo nell'uomo e il professionista che è oggi. Attualmente svolge l’attività di istruttore presso l’Associazione Verace Pizza Napoletana per i corsi di base e di specializzazione. È inoltre formatore e consulente per startup."
+var about_me_txt_en = "Gennaro Langella was born in San Giorgio a Cremano (Napoli) in 1981. He belongs to a family with an history of four generation of neapolitan pizza makers. His long journey starts when he was thirteen working in the pizzeria owned by his family. When he was twenty-four he starts his international career travelling  and working in four different continents he contributed to spread the art of the neapolitan pizza in the world. He is the youngest in the family and his father helped him to grow not only as a person but he gave him the chance to work with the most skilled people in the field enriching his knowledge and become a great professional. Nowadays he works as instructor at “Associazione Pizza Verace Napoletana” and he is a trainer and consultant for startups."
+
+
+var history_txt_it = "Una storia e una tradizione che iniziano nel lontano 1933 quando Michele, nonno di Gennaro, inizia a fare il garzone in una pizzeria vicino casa per poi arrivare a lavorare nella pizzeria Castiello, tutt’ora di proprietà della famiglia Langella nel quartiere limitrofo di San Giovanni a Teduccio. Qui muove i suoi primi passi nel mondo della pizza, Antonio, padre di Gennaro che inizia la professione quasi per gioco fino a farne una vera e propria passione. Fin da giovane lavora per le più in prestigiose pizzerie dell’epoca contribuendo a far conoscere l’arte del pizzaiolo napoletano in Italia e nel mondo. Nella seconda parte della sua carriera, grazie al suo spiccato ingegno, si dedica alla costruzione di forni in stile antico, arte acquisita da giovane da Domenico de Turris, mastro fornaio specializzato nella costruzione di forni. Ha partecipato a numerosi eventi internazionali tra i quali ricordiamo quello come testimonial nel 2007 a Bruxelles per il riconoscimento del marchio Stg che stabilisce l’autenticità della pizza napoletana e delle sue origini."
+var history_txt_en = "The Langella’s family history and tradition starts in 1933 when Michele, Gennaro’s grandfather starts working in a local pizzeria. In a few years he manages to start his own business where Antonio, Gennaro’s father starts getting familiar with the art of the neapolitan pizza. Since he was young he works for the most important and popular pizzerias, contributing to spread the art of the neapolitan pizza in Italy and in the world. In the second part of his long career he works as artisan manufacturing traditional pizza ovens an art he learned when he was younger from the master Domenico de Turris. He took part to many international events like the one in 2007 in Bruxelles where pizza verace napoletana got the STG certification (Traditional Specialty Guaranteed)."
+
+var quotation_it = "Nata a Napoli la pizza e i suoi artigiani hanno conquistato il mondo. Io sono un artigiano, un umile pizzaiolo il cui sogno é sempre stato quello di far conoscere e trasmettere l’arte del pizzaiolo napoletano."
+var quotation_en = "Neapolitan pizza and the art of the neapolitan pizza makers conquered the world. I am an artisan, an humble pizza maker with the dream to spread the art of the neapolitan pizza in the world."
+
 var resources = {
     en: {
       translation: {
@@ -80,7 +90,10 @@ var resources = {
         "msg": "Message",
         "submit-form": "Submit",
         "thanks-msg": "Thanks for contacting us!",
-        "contact-msg": "We will get back to you soon!"
+        "contact-msg": "We will get back to you soon!",
+        "about-me-text": about_me_txt_en,
+        "history-text": history_txt_en,
+        "quotation":  quotation_en
 
       }
     },
@@ -109,7 +122,10 @@ var resources = {
         "msg": "Messaggio",
         "submit-form": "Invia",
         "thanks-msg": "Grazie per averci contattato!",
-        "contact-msg": "Vi risponderemo il prima possibile!"
+        "contact-msg": "Vi risponderemo il prima possibile!",
+        "about-me-text": about_me_txt_it,
+        "history-text": history_txt_it,
+        "quotation":  quotation_it
       }
     }
   }
@@ -154,6 +170,9 @@ var resources = {
     document.getElementById('gallery-foot').innerHTML = i18next.t('gallery');
     document.getElementById('thanks-msg').innerHTML = i18next.t('thanks-msg');
     document.getElementById('contact-msg').innerHTML = i18next.t('contact-msg');
+    document.getElementById('about-me-text').innerHTML = i18next.t('about-me-text');
+    document.getElementById('history-text').innerHTML = i18next.t('history-text');
+    document.getElementById('quotation').innerHTML = i18next.t('quotation');
 
     if(window.innerWidth <= 860) { 
       addShowMore(i18next.language);

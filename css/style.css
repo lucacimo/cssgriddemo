@@ -25,8 +25,8 @@ body {
   font-family: Montserrat,sans-serif; }
 
 section {
-  margin-bottom: 11.8rem;
-  padding-top: 11.8rem; }
+  margin-bottom: 8rem;
+  padding-top: 8rem; }
   @media only screen and (max-width: 53.75em) {
     section {
       margin-bottom: 5rem;
@@ -46,7 +46,7 @@ section {
   grid-column: full-start / full-end;
   background: rgba(0, 0, 0, 0.3);
   position: relative;
-  margin-bottom: 11.8rem;
+  margin-bottom: 8rem;
   height: 100vh;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 53.75em) {
@@ -64,9 +64,6 @@ section {
   @media only screen and (max-width: 28em) {
     .header {
       height: 50vh; } }
-  @media all and (orientation: landscape) {
-    .header {
-      height: 100vh; } }
 
 .navigation {
   display: flex;
@@ -132,6 +129,10 @@ section {
   grid-column: center-start / center-end; }
   .gallery:not(:last-child) {
     margin-bottom: 5rem; }
+    .gallery:not(:last-child) h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.8rem; }
   .gallery__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -318,29 +319,42 @@ section {
   transform: translateY(0); }
 
 .about {
-  grid-column: center-start / center-end;
+  grid-column: center-start / center-end; }
+  .about blockquote {
+    position: relative;
+    margin-top: 8rem;
+    font-size: 2rem; }
+  .about blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -6rem;
+    left: -1.6rem; }
+
+.about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4rem; }
   @media only screen and (max-width: 53.75em) {
-    .about {
+    .about-container {
       grid-template-columns: 1fr; } }
   @media only screen and (max-width: 53.75em) {
-    .about--me {
+    .about-container--me {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; } }
   @media only screen and (max-width: 49em) {
-    .about--me {
+    .about-container--me {
       margin-bottom: 3rem; } }
   @media only screen and (max-width: 53.75em) {
-    .about--history {
+    .about-container--history {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; } }
-  .about__img {
+  .about-container__img {
     max-width: 15rem;
     max-height: 15rem;
     float: left;
@@ -350,7 +364,7 @@ section {
     shape-outside: circle();
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 49em) {
-      .about__img {
+      .about-container__img {
         margin-bottom: 2rem; } }
 
 .diploma {
