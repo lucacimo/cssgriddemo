@@ -369,8 +369,7 @@ section {
 
 .diploma {
   grid-column: center-start / center-end;
-  margin-left: auto;
-  margin-right: auto; }
+  text-align: center; }
   .diploma__img {
     max-width: 40rem; }
 
