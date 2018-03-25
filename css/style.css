@@ -373,7 +373,7 @@ section {
   grid-template-columns: 1fr 1fr 1fr; }
   .diploma__img {
     grid-column: 2 / 3;
-    max-width: 35rem; }
+    max-width: 25rem; }
 
 .heading--tertiary {
   font-family: "Montserrat",sans-serif;
