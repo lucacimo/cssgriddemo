@@ -369,9 +369,11 @@ section {
 
 .diploma {
   grid-column: center-start / center-end;
-  text-align: center; }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
   .diploma__img {
-    max-width: 40rem; }
+    grid-column: 2 / 3;
+    max-width: 35rem; }
 
 .heading--tertiary {
   font-family: "Montserrat",sans-serif;

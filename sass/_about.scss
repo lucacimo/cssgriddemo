@@ -70,9 +70,11 @@
 
 .diploma {
     grid-column: center-start / center-end;
-    text-align: center;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
 
     &__img {
-        max-width: 40rem;
+        grid-column: 2 / 3;
+        max-width: 35rem;
     }
 }
