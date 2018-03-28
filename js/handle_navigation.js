@@ -6,7 +6,6 @@
     var navlist = document.getElementById("navigation__list");
     var about = document.getElementById("about");
     var logo = document.getElementById("logo");
-    var navicon = document.getElementById("nav-icon");
     
     // Get the offset position of the navbar
     var sticky = spacing.offsetTop;
@@ -35,6 +34,7 @@
     }
     
     hamburger.addEventListener("click", function(){
+        var navicon = document.getElementById("nav-icon");
 
         if (open) {
             navlist.style.transform="translate(-300px,0)";
